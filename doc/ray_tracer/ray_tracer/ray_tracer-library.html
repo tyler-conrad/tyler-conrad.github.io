@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="ray_tracer library API docs, for the Dart programming language.">
+  <title>ray_tracer library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">ray_tracer</a></li>
+    <li class="self-crumb">ray_tracer.dart</li>
+  </ol>
+  <div class="self-name">ray_tracer</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar=""
+    data-below-sidebar="ray_tracer&#47;ray_tracer-library-sidebar.html">
+  
+    <div>
+      
+
+      <h1>
+        <span class="kind-library">ray_tracer</span>
+        library 
+ 
+
+      </h1>
+    </div>
+
+    
+<section class="desc markdown">
+  <p>Main library for the ray_tracer project.</p>
+<p>The ray tracer library is responsible for rendering realistic images by
+simulating the behavior of light rays. It provides various functions and
+classes for creating and manipulating 3D scenes, generating rays, and
+calculating intersections with objects in the scene.</p>
+</section>
+
+
+    <section class="summary offset-anchor" id="classes">
+      <h2>Classes</h2>
+
+      <dl>
+          <dt id="Camera">
+  <span class="name "><a href="../ray_tracer/Camera-class.html">Camera</a></span> 
+
+</dt>
+<dd>
+  Represents a camera.
+</dd>
+
+          <dt id="Dielectric">
+  <span class="name "><a href="../ray_tracer/Dielectric-class.html">Dielectric</a></span> 
+
+</dt>
+<dd>
+  Represents a dielectric material.
+</dd>
+
+          <dt id="Hitable">
+  <span class="name "><a href="../ray_tracer/Hitable-class.html">Hitable</a></span> 
+
+</dt>
+<dd>
+  An abstract class representing a hitable object.
+</dd>
+
+          <dt id="HitableList">
+  <span class="name "><a href="../ray_tracer/HitableList-class.html">HitableList</a></span> 
+
+</dt>
+<dd>
+  Represents a list of objects that can be hit.
+</dd>
+
+          <dt id="HitRecord">
+  <span class="name "><a href="../ray_tracer/HitRecord-class.html">HitRecord</a></span> 
+
+</dt>
+<dd>
+  Represents a record of a hit in a ray tracing simulation.
+</dd>
+
+          <dt id="Lambertian">
+  <span class="name "><a href="../ray_tracer/Lambertian-class.html">Lambertian</a></span> 
+
+</dt>
+<dd>
+  Represents a Lambertian material.
+</dd>
+
+          <dt id="Material">
+  <span class="name "><a href="../ray_tracer/Material-class.html">Material</a></span> 
+
+</dt>
+<dd>
+  Represents a material used in ray tracing.
+</dd>
+
+          <dt id="Metal">
+  <span class="name "><a href="../ray_tracer/Metal-class.html">Metal</a></span> 
+
+</dt>
+<dd>
+  Represents a metal material for ray tracing.
+</dd>
+
+          <dt id="Ray">
+  <span class="name "><a href="../ray_tracer/Ray-class.html">Ray</a></span> 
+
+</dt>
+<dd>
+  Represents a ray in a 3D space.
+</dd>
+
+          <dt id="RayTracer">
+  <span class="name "><a href="../ray_tracer/RayTracer-class.html">RayTracer</a></span> 
+
+</dt>
+<dd>
+  A <a href="https://api.flutter.dev/flutter/widgets/Widget-class.html">m.Widget</a> used to render a ray traced scene.
+</dd>
+
+          <dt id="RayTracerApp">
+  <span class="name "><a href="../ray_tracer/RayTracerApp-class.html">RayTracerApp</a></span> 
+
+</dt>
+<dd>
+  A Flutter application that implements a ray tracer.
+</dd>
+
+          <dt id="RenderChunkConfig">
+  <span class="name "><a href="../ray_tracer/RenderChunkConfig-class.html">RenderChunkConfig</a></span> 
+
+</dt>
+<dd>
+  Represents the configuration for rendering a chunk of the output image using
+isolates to distribute the work.
+</dd>
+
+          <dt id="Sphere">
+  <span class="name "><a href="../ray_tracer/Sphere-class.html">Sphere</a></span> 
+
+</dt>
+<dd>
+  Represents a sphere.
+</dd>
+
+      </dl>
+    </section>
+
+
+
+
+
+
+    <section class="summary offset-anchor" id="properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+          <dt id="rng" class="property">
+  <span class="name"><a href="../ray_tracer/rng.html">rng</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-math/Random-class.html">Random</a></span>
+  
+
+</dt>
+<dd>
+  Random number generator
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="functions">
+      <h2>Functions</h2>
+
+      <dl class="callables">
+          <dt id="color" class="callable">
+  <span class="name"><a href="../ray_tracer/color.html">color</a></span><span class="signature">(<wbr><span class="parameter" id="color-param-ray"><span class="type-annotation"><a href="../ray_tracer/Ray-class.html">Ray</a></span> <span class="parameter-name">ray</span>, </span><span class="parameter" id="color-param-world"><span class="type-annotation"><a href="../ray_tracer/Hitable-class.html">Hitable</a></span> <span class="parameter-name">world</span>, </span><span class="parameter" id="color-param-depth"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">depth</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math_64/Vector3-class.html">Vector3</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Calculates the color of a ray in the scene.
+  
+
+</dd>
+
+          <dt id="randomPointOnUnitDisk" class="callable">
+  <span class="name"><a href="../ray_tracer/randomPointOnUnitDisk.html">randomPointOnUnitDisk</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math_64/Vector3-class.html">Vector3</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a random point on a unit disk.
+  
+
+</dd>
+
+          <dt id="randomPointOnUnitSphere" class="callable">
+  <span class="name"><a href="../ray_tracer/randomPointOnUnitSphere.html">randomPointOnUnitSphere</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math_64/Vector3-class.html">Vector3</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+          <dt id="reflect" class="callable">
+  <span class="name"><a href="../ray_tracer/reflect.html">reflect</a></span><span class="signature">(<wbr><span class="parameter" id="reflect-param-v"><span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math_64/Vector3-class.html">Vector3</a></span> <span class="parameter-name">v</span>, </span><span class="parameter" id="reflect-param-normal"><span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math_64/Vector3-class.html">Vector3</a></span> <span class="parameter-name">normal</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math_64/Vector3-class.html">Vector3</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Calculates the reflection of a vector <code>v</code> against a given normal vector.
+  
+
+</dd>
+
+          <dt id="refract" class="callable">
+  <span class="name"><a href="../ray_tracer/refract.html">refract</a></span><span class="signature">(<wbr><span class="parameter" id="refract-param-v"><span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math_64/Vector3-class.html">Vector3</a></span> <span class="parameter-name">v</span>, </span><span class="parameter" id="refract-param-normal"><span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math_64/Vector3-class.html">Vector3</a></span> <span class="parameter-name">normal</span>, </span><span class="parameter" id="refract-param-niOverNt"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">niOverNt</span>, </span><span class="parameter" id="refract-param-refracted"><span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math_64/Vector3-class.html">Vector3</a></span> <span class="parameter-name">refracted</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Calculates the refraction of a vector based on the given parameters.
+  
+
+</dd>
+
+          <dt id="renderChunk" class="callable">
+  <span class="name"><a href="../ray_tracer/renderChunk.html">renderChunk</a></span><span class="signature">(<wbr><span class="parameter" id="renderChunk-param-config"><span class="type-annotation"><a href="../ray_tracer/RenderChunkConfig-class.html">RenderChunkConfig</a></span> <span class="parameter-name">config</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Renders a chunk of the scene based on the provided <code>config</code>.
+  
+
+</dd>
+
+          <dt id="scene" class="callable">
+  <span class="name"><a href="../ray_tracer/scene.html">scene</a></span><span class="signature">(<wbr><span class="parameter" id="scene-param-random"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span>&gt;</span></span> <span class="parameter-name">random</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../ray_tracer/Hitable-class.html">Hitable</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates a scene of spheres with different materials.
+  
+
+</dd>
+
+          <dt id="schlick" class="callable">
+  <span class="name"><a href="../ray_tracer/schlick.html">schlick</a></span><span class="signature">(<wbr><span class="parameter" id="schlick-param-cosine"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">cosine</span>, </span><span class="parameter" id="schlick-param-refractionIndex"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">refractionIndex</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Calculates the Schlick approximation for the reflection coefficient.
+  
+
+</dd>
+
+      </dl>
+    </section>
+
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">ray_tracer</a></li>
+    <li class="self-crumb">ray_tracer.dart</li>
+</ol>
+
+
+    <h5><span class="package-name">ray_tracer</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="../main/main-library.html">main</a></li>
+      <li><a href="../ray_tracer/ray_tracer-library.html">ray_tracer</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <h5>ray_tracer library</h5>
+  </div><!--/sidebar-offcanvas-right-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    ray_tracer
+      0.1.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

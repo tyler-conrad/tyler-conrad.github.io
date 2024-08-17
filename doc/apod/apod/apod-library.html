@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="apod library API docs, for the Dart programming language.">
+  <title>apod library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">apod</a></li>
+    <li class="self-crumb">apod.dart</li>
+  </ol>
+  <div class="self-name">apod</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar=""
+    data-below-sidebar="apod&#47;apod-library-sidebar.html">
+  
+    <div>
+      
+
+      <h1>
+        <span class="kind-library">apod</span>
+        library 
+ 
+
+      </h1>
+    </div>
+
+    
+<section class="desc markdown">
+  <p>This library provides a Flutter app to browse images provided by NASA on a
+daily basis.</p>
+<p>It uses the <a href="https://github.com/nasa/apod-api">apod-api</a> project
+to provide image metadata including links scraped from the <a href="https://apod.nasa.gov/apod/astropix.html">Astronomy
+Picture of the Day</a> website.</p>
+</section>
+
+
+    <section class="summary offset-anchor" id="classes">
+      <h2>Classes</h2>
+
+      <dl>
+          <dt id="ApodScaffold">
+  <span class="name "><a href="../apod/ApodScaffold-class.html">ApodScaffold</a></span> 
+
+</dt>
+<dd>
+  A scaffold widget for the app.
+</dd>
+
+          <dt id="Gallery">
+  <span class="name "><a href="../apod/Gallery-class.html">Gallery</a></span> 
+
+</dt>
+<dd>
+  A gallery widget that displays media metadata in a grid.
+</dd>
+
+          <dt id="HomeScreen">
+  <span class="name "><a href="../apod/HomeScreen-class.html">HomeScreen</a></span> 
+
+</dt>
+<dd>
+  
+</dd>
+
+          <dt id="HomeScreenMenu">
+  <span class="name "><a href="../apod/HomeScreenMenu-class.html">HomeScreenMenu</a></span> 
+
+</dt>
+<dd>
+  A home screen menu widget that changes state based on the current route.
+</dd>
+
+          <dt id="InteractiveViewer">
+  <span class="name "><a href="../apod/InteractiveViewer-class.html">InteractiveViewer</a></span> 
+
+</dt>
+<dd>
+  A widget for displaying an image with interaction options.
+</dd>
+
+          <dt id="MediaMetadataController">
+  <span class="name "><a href="../apod/MediaMetadataController-class.html">MediaMetadataController</a></span> 
+
+</dt>
+<dd>
+  Controller for media metadata.
+</dd>
+
+          <dt id="NameStringConstants">
+  <span class="name "><a href="../apod/NameStringConstants-class.html">NameStringConstants</a></span> 
+
+</dt>
+<dd>
+  A class that contains string constants for page names.
+</dd>
+
+          <dt id="PageViewSwiper">
+  <span class="name "><a href="../apod/PageViewSwiper-class.html">PageViewSwiper</a></span> 
+
+</dt>
+<dd>
+  A widget for swiping through a collection of images.
+</dd>
+
+          <dt id="PopulateDatabasePage">
+  <span class="name "><a href="../apod/PopulateDatabasePage-class.html">PopulateDatabasePage</a></span> 
+
+</dt>
+<dd>
+  An initial loading page that populates the database.
+</dd>
+
+          <dt id="PushArguments">
+  <span class="name "><a href="../apod/PushArguments-class.html">PushArguments</a></span> 
+
+</dt>
+<dd>
+  Encapsulates arguments for the <code>Navigator.pushNamed</code> method.
+</dd>
+
+          <dt id="RouteStringConstants">
+  <span class="name "><a href="../apod/RouteStringConstants-class.html">RouteStringConstants</a></span> 
+
+</dt>
+<dd>
+  A class that contains string constants for routes.
+</dd>
+
+          <dt id="SingleImageView">
+  <span class="name "><a href="../apod/SingleImageView-class.html">SingleImageView</a></span> 
+
+</dt>
+<dd>
+  A widget for displaying a single image.
+</dd>
+
+          <dt id="SlideShow">
+  <span class="name "><a href="../apod/SlideShow-class.html">SlideShow</a></span> 
+
+</dt>
+<dd>
+  A slide show widget that displays images from the NASA APOD API.
+</dd>
+
+          <dt id="SlideShowImageForegroundAndBackground">
+  <span class="name "><a href="../apod/SlideShowImageForegroundAndBackground-class.html">SlideShowImageForegroundAndBackground</a></span> 
+
+</dt>
+<dd>
+  Contains a foreground and background image for the slide show.
+</dd>
+
+          <dt id="VerticalScrollBrowser">
+  <span class="name "><a href="../apod/VerticalScrollBrowser-class.html">VerticalScrollBrowser</a></span> 
+
+</dt>
+<dd>
+  A widget for browsing images in a vertical scroll view.
+</dd>
+
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="enums">
+      <h2>Enums</h2>
+
+      <dl>
+          <dt id="DatabasePopulationStrategy">
+  <span class="name "><a href="../apod/DatabasePopulationStrategy.html">DatabasePopulationStrategy</a></span> 
+
+</dt>
+<dd>
+  Current state of the database.
+</dd>
+
+          <dt id="PopulateDatabasePageStrategy">
+  <span class="name "><a href="../apod/PopulateDatabasePageStrategy.html">PopulateDatabasePageStrategy</a></span> 
+
+</dt>
+<dd>
+  The strategy for populating the database.
+</dd>
+
+      </dl>
+    </section>
+
+
+
+
+
+    <section class="summary offset-anchor" id="properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+          <dt id="controller" class="property">
+  <span class="name"><a href="../apod/controller.html">controller</a></span>
+  <span class="signature">&#8596; <a href="../apod/MediaMetadataController-class.html">MediaMetadataController</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">late</span><span class="feature">final</span></div>
+
+</dd>
+
+          <dt id="earliestMediaMetadata" class="property">
+  <span class="name"><a href="../apod/earliestMediaMetadata.html">earliestMediaMetadata</a></span>
+  <span class="signature">&#8594; <a href="https://pub.dev/documentation/timezone/0.9.4/timezone.standalone/TZDateTime-class.html">TZDateTime</a></span>
+  
+
+</dt>
+<dd>
+  Earliest date the database has media metadata for.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+          <dt id="logger" class="property">
+  <span class="name"><a href="../apod/logger.html">logger</a></span>
+  <span class="signature">&#8596; <a href="https://pub.dev/documentation/logger/2.4.0/logger/Logger-class.html">Logger</a></span>
+  
+
+</dt>
+<dd>
+  Logger instance for the application.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+          <dt id="navigatorKey" class="property">
+  <span class="name"><a href="../apod/navigatorKey.html">navigatorKey</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/widgets/GlobalKey-class.html">GlobalKey</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/widgets/NavigatorState-class.html">NavigatorState</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  A global key for the navigator.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+          <dt id="placeholder" class="property">
+  <span class="name"><a href="../apod/placeholder.html">placeholder</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/widgets/Image-class.html">Image</a></span>
+  
+
+</dt>
+<dd>
+  A placeholder image widget.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+          <dt id="routeHistory" class="property">
+  <span class="name"><a href="../apod/routeHistory.html">routeHistory</a></span>
+  <span class="signature">&#8594; FixedLengthQueue<span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  A class that contains a fixed length queue for route history.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+          <dt id="routeObserver" class="property">
+  <span class="name"><a href="../apod/routeObserver.html">routeObserver</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/widgets/RouteObserver-class.html">RouteObserver</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/widgets/ModalRoute-class.html">ModalRoute</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  A route observer for the navigator.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+          <dt id="title" class="property">
+  <span class="name"><a href="../apod/title.html">title</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="functions">
+      <h2>Functions</h2>
+
+      <dl class="callables">
+          <dt id="buildController" class="callable">
+  <span class="name"><a href="../apod/buildController.html">buildController</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+          <dt id="buildWidgetFillFadeInImage" class="callable">
+  <span class="name"><a href="../apod/buildWidgetFillFadeInImage.html">buildWidgetFillFadeInImage</a></span><span class="signature">(<wbr>{<span class="parameter" id="buildWidgetFillFadeInImage-param-placeholder"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">placeholder</span>, </span><span class="parameter" id="buildWidgetFillFadeInImage-param-image"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">image</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/widgets/FadeInImage-class.html">FadeInImage</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  A function that builds a fade-in image widget.
+  
+
+</dd>
+
+          <dt id="setup" class="callable">
+  <span class="name"><a href="../apod/setup.html">setup</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Stub implementation of timezone package for unsupported platforms.
+  
+
+</dd>
+
+      </dl>
+    </section>
+
+
+    <section class="summary offset-anchor" id="exceptions">
+      <h2>Exceptions / Errors</h2>
+
+      <dl>
+          <dt id="InvalidRouteException">
+  <span class="name "><a href="../apod/InvalidRouteException-class.html">InvalidRouteException</a></span> 
+
+</dt>
+<dd>
+  An exception for invalid routes.
+</dd>
+
+      </dl>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">apod</a></li>
+    <li class="self-crumb">apod.dart</li>
+</ol>
+
+
+    <h5><span class="package-name">apod</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="../apod/apod-library.html">apod</a></li>
+      <li><a href="../main/main-library.html">main</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <h5>apod library</h5>
+  </div><!--/sidebar-offcanvas-right-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    apod
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

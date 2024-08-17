@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the RRect class from the floss library, for the Dart programming language.">
+  <title>RRect class - floss library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">floss</a></li>
+    <li><a href="../floss/floss-library.html">floss.dart</a></li>
+    <li class="self-crumb">RRect class</li>
+  </ol>
+  <div class="self-name">RRect</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="floss&#47;floss-library-sidebar.html"
+    data-below-sidebar="floss&#47;RRect-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">RRect</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Represents a rounded rectangle.</p>
+<p>Wraps a <a href="https://api.flutter.dev/flutter/dart-ui/RRect-class.html">ui.RRect</a> to provide easier interoperability with the <a href="../floss/Vector2-class.html">v.Vector2</a>.</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="RRect.fromLTRBAndCorners" class="callable">
+          <span class="name"><a href="../floss/RRect/RRect.fromLTRBAndCorners.html">RRect.fromLTRBAndCorners</a></span><span class="signature">(<span class="parameter" id="fromLTRBAndCorners-param-left"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">left</span>, </span><span class="parameter" id="fromLTRBAndCorners-param-top"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">top</span>, </span><span class="parameter" id="fromLTRBAndCorners-param-right"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">right</span>, </span><span class="parameter" id="fromLTRBAndCorners-param-bottom"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">bottom</span>, {</span><span class="parameter" id="fromLTRBAndCorners-param-topLeft"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Radius-class.html">Radius</a></span> <span class="parameter-name">topLeft</span> = <span class="default-value">ui.Radius.zero</span>, </span><span class="parameter" id="fromLTRBAndCorners-param-topRight"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Radius-class.html">Radius</a></span> <span class="parameter-name">topRight</span> = <span class="default-value">ui.Radius.zero</span>, </span><span class="parameter" id="fromLTRBAndCorners-param-bottomRight"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Radius-class.html">Radius</a></span> <span class="parameter-name">bottomRight</span> = <span class="default-value">ui.Radius.zero</span>, </span><span class="parameter" id="fromLTRBAndCorners-param-bottomLeft"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Radius-class.html">Radius</a></span> <span class="parameter-name">bottomLeft</span> = <span class="default-value">ui.Radius.zero</span></span>})</span>
+        </dt>
+        <dd>
+          Creates a rounded rectangle from the <code>left</code>, <code>top</code>, <code>right</code>, <code>bottom</code>, and
+the <code>topLeft</code>, <code>topRight</code>, <code>bottomRight</code>, and <code>bottomLeft</code> radius
+parameters.
+        </dd>
+        <dt id="RRect.fromLTRBR" class="callable">
+          <span class="name"><a href="../floss/RRect/RRect.fromLTRBR.html">RRect.fromLTRBR</a></span><span class="signature">(<span class="parameter" id="fromLTRBR-param-left"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">left</span>, </span><span class="parameter" id="fromLTRBR-param-top"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">top</span>, </span><span class="parameter" id="fromLTRBR-param-right"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">right</span>, </span><span class="parameter" id="fromLTRBR-param-bottom"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">bottom</span>, </span><span class="parameter" id="fromLTRBR-param-radius"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Radius-class.html">Radius</a></span> <span class="parameter-name">radius</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a rounded rectangle from the <code>left</code>, <code>top</code>, <code>right</code>,
+<code>bottom</code>, and <code>radius</code>.
+        </dd>
+        <dt id="RRect.fromLTRBXY" class="callable">
+          <span class="name"><a href="../floss/RRect/RRect.fromLTRBXY.html">RRect.fromLTRBXY</a></span><span class="signature">(<span class="parameter" id="fromLTRBXY-param-left"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">left</span>, </span><span class="parameter" id="fromLTRBXY-param-top"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">top</span>, </span><span class="parameter" id="fromLTRBXY-param-right"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">right</span>, </span><span class="parameter" id="fromLTRBXY-param-bottom"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">bottom</span>, </span><span class="parameter" id="fromLTRBXY-param-radiusX"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">radiusX</span>, </span><span class="parameter" id="fromLTRBXY-param-radiusY"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">radiusY</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a rounded rectangle with the <code>left</code>, <code>top</code>, <code>right</code>, <code>bottom</code>, and
+<code>radiusX</code>, <code>radiusY</code>.
+        </dd>
+        <dt id="RRect.fromOffsetSizeRadius" class="callable">
+          <span class="name"><a href="../floss/RRect/RRect.fromOffsetSizeRadius.html">RRect.fromOffsetSizeRadius</a></span><span class="signature">(<span class="parameter" id="fromOffsetSizeRadius-param-pos"><span class="type-annotation"><a href="../floss/Offset-class.html">Offset</a></span> <span class="parameter-name">pos</span>, </span><span class="parameter" id="fromOffsetSizeRadius-param-size"><span class="type-annotation"><a href="../floss/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="fromOffsetSizeRadius-param-radius"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">radius</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a rounded rectangle from the <code>pos</code>, <code>size</code>, and <code>radius</code>,
+        </dd>
+        <dt id="RRect.fromOffsetSizeVecXY" class="callable">
+          <span class="name"><a href="../floss/RRect/RRect.fromOffsetSizeVecXY.html">RRect.fromOffsetSizeVecXY</a></span><span class="signature">(<span class="parameter" id="fromOffsetSizeVecXY-param-pos"><span class="type-annotation"><a href="../floss/Offset-class.html">Offset</a></span> <span class="parameter-name">pos</span>, </span><span class="parameter" id="fromOffsetSizeVecXY-param-size"><span class="type-annotation"><a href="../floss/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="fromOffsetSizeVecXY-param-radius"><span class="type-annotation"><a href="../floss/Vector2-class.html">Vector2</a></span> <span class="parameter-name">radius</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a rounded rectangle from the <code>pos</code>, <code>size</code>, and <code>radius</code>,
+        </dd>
+        <dt id="RRect.fromOffsetSizeXY" class="callable">
+          <span class="name"><a href="../floss/RRect/RRect.fromOffsetSizeXY.html">RRect.fromOffsetSizeXY</a></span><span class="signature">(<span class="parameter" id="fromOffsetSizeXY-param-pos"><span class="type-annotation"><a href="../floss/Offset-class.html">Offset</a></span> <span class="parameter-name">pos</span>, </span><span class="parameter" id="fromOffsetSizeXY-param-size"><span class="type-annotation"><a href="../floss/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="fromOffsetSizeXY-param-radiusX"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">radiusX</span>, </span><span class="parameter" id="fromOffsetSizeXY-param-radiusY"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">radiusY</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a rounded rectangle from the <code>pos</code>, <code>size</code> and <code>radiusX</code>,
+<code>radiusY</code> parameters.
+        </dd>
+        <dt id="RRect.fromOffsetVecSizeRadius" class="callable">
+          <span class="name"><a href="../floss/RRect/RRect.fromOffsetVecSizeRadius.html">RRect.fromOffsetVecSizeRadius</a></span><span class="signature">(<span class="parameter" id="fromOffsetVecSizeRadius-param-pos"><span class="type-annotation"><a href="../floss/Offset-class.html">Offset</a></span> <span class="parameter-name">pos</span>, </span><span class="parameter" id="fromOffsetVecSizeRadius-param-size"><span class="type-annotation"><a href="../floss/Vector2-class.html">Vector2</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="fromOffsetVecSizeRadius-param-radius"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">radius</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a rounded rectangle from the <code>pos</code>, <code>size</code>, and <code>radius</code>,
+        </dd>
+        <dt id="RRect.fromOffsetVecSizeVecXY" class="callable">
+          <span class="name"><a href="../floss/RRect/RRect.fromOffsetVecSizeVecXY.html">RRect.fromOffsetVecSizeVecXY</a></span><span class="signature">(<span class="parameter" id="fromOffsetVecSizeVecXY-param-pos"><span class="type-annotation"><a href="../floss/Offset-class.html">Offset</a></span> <span class="parameter-name">pos</span>, </span><span class="parameter" id="fromOffsetVecSizeVecXY-param-size"><span class="type-annotation"><a href="../floss/Vector2-class.html">Vector2</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="fromOffsetVecSizeVecXY-param-radius"><span class="type-annotation"><a href="../floss/Vector2-class.html">Vector2</a></span> <span class="parameter-name">radius</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a rounded rectangle from the <code>pos</code>, <code>size</code>, and <code>radius</code>,
+        </dd>
+        <dt id="RRect.fromOffsetVecSizeXY" class="callable">
+          <span class="name"><a href="../floss/RRect/RRect.fromOffsetVecSizeXY.html">RRect.fromOffsetVecSizeXY</a></span><span class="signature">(<span class="parameter" id="fromOffsetVecSizeXY-param-pos"><span class="type-annotation"><a href="../floss/Offset-class.html">Offset</a></span> <span class="parameter-name">pos</span>, </span><span class="parameter" id="fromOffsetVecSizeXY-param-size"><span class="type-annotation"><a href="../floss/Vector2-class.html">Vector2</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="fromOffsetVecSizeXY-param-radiusX"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">radiusX</span>, </span><span class="parameter" id="fromOffsetVecSizeXY-param-radiusY"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">radiusY</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a rounded rectangle from the <code>pos</code>, <code>size</code>, and <code>radiusX</code>,
+<code>radiusY</code> parameters.
+        </dd>
+        <dt id="RRect.fromRectAndCorners" class="callable">
+          <span class="name"><a href="../floss/RRect/RRect.fromRectAndCorners.html">RRect.fromRectAndCorners</a></span><span class="signature">(<span class="parameter" id="fromRectAndCorners-param-rect"><span class="type-annotation"><a href="../floss/Rect-class.html">Rect</a></span> <span class="parameter-name">rect</span>, {</span><span class="parameter" id="fromRectAndCorners-param-topLeft"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Radius-class.html">Radius</a></span> <span class="parameter-name">topLeft</span> = <span class="default-value">ui.Radius.zero</span>, </span><span class="parameter" id="fromRectAndCorners-param-topRight"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Radius-class.html">Radius</a></span> <span class="parameter-name">topRight</span> = <span class="default-value">ui.Radius.zero</span>, </span><span class="parameter" id="fromRectAndCorners-param-bottomRight"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Radius-class.html">Radius</a></span> <span class="parameter-name">bottomRight</span> = <span class="default-value">ui.Radius.zero</span>, </span><span class="parameter" id="fromRectAndCorners-param-bottomLeft"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Radius-class.html">Radius</a></span> <span class="parameter-name">bottomLeft</span> = <span class="default-value">ui.Radius.zero</span></span>})</span>
+        </dt>
+        <dd>
+          Creates a rounded rectangle from a <code>rect</code> and a <code>topLeft</code>, <code>topRight</code>,
+<code>bottomRight</code>, and <code>bottomLeft</code> radius parameters.
+        </dd>
+        <dt id="RRect.fromRectAndRadius" class="callable">
+          <span class="name"><a href="../floss/RRect/RRect.fromRectAndRadius.html">RRect.fromRectAndRadius</a></span><span class="signature">(<span class="parameter" id="fromRectAndRadius-param-rect"><span class="type-annotation"><a href="../floss/Rect-class.html">Rect</a></span> <span class="parameter-name">rect</span>, </span><span class="parameter" id="fromRectAndRadius-param-radius"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Radius-class.html">Radius</a></span> <span class="parameter-name">radius</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a rounded rectangle from the given <code>rect</code> and <code>radius</code>.
+        </dd>
+        <dt id="RRect.fromRectVecXY" class="callable">
+          <span class="name"><a href="../floss/RRect/RRect.fromRectVecXY.html">RRect.fromRectVecXY</a></span><span class="signature">(<span class="parameter" id="fromRectVecXY-param-rect"><span class="type-annotation"><a href="../floss/Rect-class.html">Rect</a></span> <span class="parameter-name">rect</span>, </span><span class="parameter" id="fromRectVecXY-param-radius"><span class="type-annotation"><a href="../floss/Vector2-class.html">Vector2</a></span> <span class="parameter-name">radius</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a rounded rectangle from the <code>rect</code> and <code>radius</code>.
+        </dd>
+        <dt id="RRect.fromRectXY" class="callable">
+          <span class="name"><a href="../floss/RRect/RRect.fromRectXY.html">RRect.fromRectXY</a></span><span class="signature">(<span class="parameter" id="fromRectXY-param-rect"><span class="type-annotation"><a href="../floss/Rect-class.html">Rect</a></span> <span class="parameter-name">rect</span>, </span><span class="parameter" id="fromRectXY-param-radiusX"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">radiusX</span>, </span><span class="parameter" id="fromRectXY-param-radiusY"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">radiusY</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a rounded rectangle from the <code>rect</code>, <code>radiusX</code> and <code>radiusY</code>.
+        </dd>
+        <dt id="RRect.fromRRect" class="callable">
+          <span class="name"><a href="../floss/RRect/RRect.fromRRect.html">RRect.fromRRect</a></span><span class="signature">(<span class="parameter" id="fromRRect-param-rrect"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/RRect-class.html">RRect</a></span> <span class="parameter-name">rrect</span></span>)</span>
+        </dt>
+        <dd>
+          
+        </dd>
+        <dt id="RRect.fromVecLTRBAndCorners" class="callable">
+          <span class="name"><a href="../floss/RRect/RRect.fromVecLTRBAndCorners.html">RRect.fromVecLTRBAndCorners</a></span><span class="signature">(<span class="parameter" id="fromVecLTRBAndCorners-param-lt"><span class="type-annotation"><a href="../floss/Vector2-class.html">Vector2</a></span> <span class="parameter-name">lt</span>, </span><span class="parameter" id="fromVecLTRBAndCorners-param-rb"><span class="type-annotation"><a href="../floss/Vector2-class.html">Vector2</a></span> <span class="parameter-name">rb</span>, {</span><span class="parameter" id="fromVecLTRBAndCorners-param-topLeft"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Radius-class.html">Radius</a></span> <span class="parameter-name">topLeft</span> = <span class="default-value">ui.Radius.zero</span>, </span><span class="parameter" id="fromVecLTRBAndCorners-param-topRight"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Radius-class.html">Radius</a></span> <span class="parameter-name">topRight</span> = <span class="default-value">ui.Radius.zero</span>, </span><span class="parameter" id="fromVecLTRBAndCorners-param-bottomRight"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Radius-class.html">Radius</a></span> <span class="parameter-name">bottomRight</span> = <span class="default-value">ui.Radius.zero</span>, </span><span class="parameter" id="fromVecLTRBAndCorners-param-bottomLeft"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Radius-class.html">Radius</a></span> <span class="parameter-name">bottomLeft</span> = <span class="default-value">ui.Radius.zero</span></span>})</span>
+        </dt>
+        <dd>
+          Creates a rounded rectangle from the <code>lt</code>, <code>rb</code>, and <code>topLeft</code>,
+<code>topRight</code>, <code>bottomRight</code>, and <code>bottomLeft</code> radius parameters.
+        </dd>
+        <dt id="RRect.fromVecLTRBRadius" class="callable">
+          <span class="name"><a href="../floss/RRect/RRect.fromVecLTRBRadius.html">RRect.fromVecLTRBRadius</a></span><span class="signature">(<span class="parameter" id="fromVecLTRBRadius-param-lt"><span class="type-annotation"><a href="../floss/Vector2-class.html">Vector2</a></span> <span class="parameter-name">lt</span>, </span><span class="parameter" id="fromVecLTRBRadius-param-rb"><span class="type-annotation"><a href="../floss/Vector2-class.html">Vector2</a></span> <span class="parameter-name">rb</span>, </span><span class="parameter" id="fromVecLTRBRadius-param-radius"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Radius-class.html">Radius</a></span> <span class="parameter-name">radius</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a rounded rectangle from the <code>lt</code>, <code>rb</code> and <code>radius</code>.
+        </dd>
+        <dt id="RRect.fromVecLTRBXY" class="callable">
+          <span class="name"><a href="../floss/RRect/RRect.fromVecLTRBXY.html">RRect.fromVecLTRBXY</a></span><span class="signature">(<span class="parameter" id="fromVecLTRBXY-param-lt"><span class="type-annotation"><a href="../floss/Vector2-class.html">Vector2</a></span> <span class="parameter-name">lt</span>, </span><span class="parameter" id="fromVecLTRBXY-param-rb"><span class="type-annotation"><a href="../floss/Vector2-class.html">Vector2</a></span> <span class="parameter-name">rb</span>, </span><span class="parameter" id="fromVecLTRBXY-param-xy"><span class="type-annotation"><a href="../floss/Vector2-class.html">Vector2</a></span> <span class="parameter-name">xy</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a rounded rectangle from the <code>lt</code>, <code>rb</code> and <code>xy</code> parameters.
+        </dd>
+        <dt id="RRect.fromVecOffsetSizeRadius" class="callable">
+          <span class="name"><a href="../floss/RRect/RRect.fromVecOffsetSizeRadius.html">RRect.fromVecOffsetSizeRadius</a></span><span class="signature">(<span class="parameter" id="fromVecOffsetSizeRadius-param-pos"><span class="type-annotation"><a href="../floss/Vector2-class.html">Vector2</a></span> <span class="parameter-name">pos</span>, </span><span class="parameter" id="fromVecOffsetSizeRadius-param-size"><span class="type-annotation"><a href="../floss/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="fromVecOffsetSizeRadius-param-radius"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">radius</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a rounded rectangle from the <code>pos</code>, <code>size</code>, and <code>radius</code>,
+        </dd>
+        <dt id="RRect.fromVecOffsetSizeVecXY" class="callable">
+          <span class="name"><a href="../floss/RRect/RRect.fromVecOffsetSizeVecXY.html">RRect.fromVecOffsetSizeVecXY</a></span><span class="signature">(<span class="parameter" id="fromVecOffsetSizeVecXY-param-pos"><span class="type-annotation"><a href="../floss/Vector2-class.html">Vector2</a></span> <span class="parameter-name">pos</span>, </span><span class="parameter" id="fromVecOffsetSizeVecXY-param-size"><span class="type-annotation"><a href="../floss/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="fromVecOffsetSizeVecXY-param-radius"><span class="type-annotation"><a href="../floss/Vector2-class.html">Vector2</a></span> <span class="parameter-name">radius</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a rounded rectangle from the <code>pos</code>, <code>size</code>, and <code>radius</code>,
+        </dd>
+        <dt id="RRect.fromVecOffsetSizeXY" class="callable">
+          <span class="name"><a href="../floss/RRect/RRect.fromVecOffsetSizeXY.html">RRect.fromVecOffsetSizeXY</a></span><span class="signature">(<span class="parameter" id="fromVecOffsetSizeXY-param-pos"><span class="type-annotation"><a href="../floss/Vector2-class.html">Vector2</a></span> <span class="parameter-name">pos</span>, </span><span class="parameter" id="fromVecOffsetSizeXY-param-size"><span class="type-annotation"><a href="../floss/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="fromVecOffsetSizeXY-param-radiusX"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">radiusX</span>, </span><span class="parameter" id="fromVecOffsetSizeXY-param-radiusY"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">radiusY</span></span>)</span>
+        </dt>
+        <dd>
+          / Creates a rounded rectangle from the <code>pos</code>, <code>size</code>, and <code>radiusX</code>,
+<code>radiusY</code> parameters.
+        </dd>
+        <dt id="RRect.fromVecOffsetVecSizeRadius" class="callable">
+          <span class="name"><a href="../floss/RRect/RRect.fromVecOffsetVecSizeRadius.html">RRect.fromVecOffsetVecSizeRadius</a></span><span class="signature">(<span class="parameter" id="fromVecOffsetVecSizeRadius-param-pos"><span class="type-annotation"><a href="../floss/Vector2-class.html">Vector2</a></span> <span class="parameter-name">pos</span>, </span><span class="parameter" id="fromVecOffsetVecSizeRadius-param-size"><span class="type-annotation"><a href="../floss/Vector2-class.html">Vector2</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="fromVecOffsetVecSizeRadius-param-radius"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">radius</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a rounded rectangle from the <code>pos</code>, <code>size</code>, and <code>radius</code>,
+        </dd>
+        <dt id="RRect.fromVecOffsetVecSizeVecXY" class="callable">
+          <span class="name"><a href="../floss/RRect/RRect.fromVecOffsetVecSizeVecXY.html">RRect.fromVecOffsetVecSizeVecXY</a></span><span class="signature">(<span class="parameter" id="fromVecOffsetVecSizeVecXY-param-pos"><span class="type-annotation"><a href="../floss/Vector2-class.html">Vector2</a></span> <span class="parameter-name">pos</span>, </span><span class="parameter" id="fromVecOffsetVecSizeVecXY-param-size"><span class="type-annotation"><a href="../floss/Vector2-class.html">Vector2</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="fromVecOffsetVecSizeVecXY-param-radius"><span class="type-annotation"><a href="../floss/Vector2-class.html">Vector2</a></span> <span class="parameter-name">radius</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a rounded rectangle from the <code>pos</code>, <code>size</code>, and <code>radius</code>,
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="blRadius" class="property">
+  <span class="name"><a href="../floss/RRect/blRadius.html">blRadius</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-ui/Radius-class.html">Radius</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="blRadiusX" class="property">
+  <span class="name"><a href="../floss/RRect/blRadiusX.html">blRadiusX</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="blRadiusY" class="property">
+  <span class="name"><a href="../floss/RRect/blRadiusY.html">blRadiusY</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="bottom" class="property">
+  <span class="name"><a href="../floss/RRect/bottom.html">bottom</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="brRadius" class="property">
+  <span class="name"><a href="../floss/RRect/brRadius.html">brRadius</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-ui/Radius-class.html">Radius</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="brRadiusX" class="property">
+  <span class="name"><a href="../floss/RRect/brRadiusX.html">brRadiusX</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="brRadiusY" class="property">
+  <span class="name"><a href="../floss/RRect/brRadiusY.html">brRadiusY</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="center" class="property">
+  <span class="name"><a href="../floss/RRect/center.html">center</a></span>
+  <span class="signature">&#8594; <a href="../floss/Offset-class.html">Offset</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="hasNaN" class="property">
+  <span class="name"><a href="../floss/RRect/hasNaN.html">hasNaN</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="height" class="property">
+  <span class="name"><a href="../floss/RRect/height.html">height</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="isCircle" class="property">
+  <span class="name"><a href="../floss/RRect/isCircle.html">isCircle</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="isEllipse" class="property">
+  <span class="name"><a href="../floss/RRect/isEllipse.html">isEllipse</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="isEmpty" class="property">
+  <span class="name"><a href="../floss/RRect/isEmpty.html">isEmpty</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="isFinite" class="property">
+  <span class="name"><a href="../floss/RRect/isFinite.html">isFinite</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="isRect" class="property">
+  <span class="name"><a href="../floss/RRect/isRect.html">isRect</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="isStadium" class="property">
+  <span class="name"><a href="../floss/RRect/isStadium.html">isStadium</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="left" class="property">
+  <span class="name"><a href="../floss/RRect/left.html">left</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="longestSide" class="property">
+  <span class="name"><a href="../floss/RRect/longestSide.html">longestSide</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="middleRect" class="property">
+  <span class="name"><a href="../floss/RRect/middleRect.html">middleRect</a></span>
+  <span class="signature">&#8594; <a href="../floss/Rect-class.html">Rect</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="outerRect" class="property">
+  <span class="name"><a href="../floss/RRect/outerRect.html">outerRect</a></span>
+  <span class="signature">&#8594; <a href="../floss/Rect-class.html">Rect</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="right" class="property">
+  <span class="name"><a href="../floss/RRect/right.html">right</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="rrect" class="property">
+  <span class="name"><a href="../floss/RRect/rrect.html">rrect</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-ui/RRect-class.html">RRect</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="safeInnerRect" class="property">
+  <span class="name"><a href="../floss/RRect/safeInnerRect.html">safeInnerRect</a></span>
+  <span class="signature">&#8594; <a href="../floss/Rect-class.html">Rect</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="shortestSide" class="property">
+  <span class="name"><a href="../floss/RRect/shortestSide.html">shortestSide</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="tallMiddleRect" class="property">
+  <span class="name"><a href="../floss/RRect/tallMiddleRect.html">tallMiddleRect</a></span>
+  <span class="signature">&#8594; <a href="../floss/Rect-class.html">Rect</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="tlRadius" class="property">
+  <span class="name"><a href="../floss/RRect/tlRadius.html">tlRadius</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-ui/Radius-class.html">Radius</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="tlRadiusX" class="property">
+  <span class="name"><a href="../floss/RRect/tlRadiusX.html">tlRadiusX</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="tlRadiusY" class="property">
+  <span class="name"><a href="../floss/RRect/tlRadiusY.html">tlRadiusY</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="top" class="property">
+  <span class="name"><a href="../floss/RRect/top.html">top</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="trRadius" class="property">
+  <span class="name"><a href="../floss/RRect/trRadius.html">trRadius</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-ui/Radius-class.html">Radius</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="trRadiusX" class="property">
+  <span class="name"><a href="../floss/RRect/trRadiusX.html">trRadiusX</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="trRadiusY" class="property">
+  <span class="name"><a href="../floss/RRect/trRadiusY.html">trRadiusY</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="wideMiddleRect" class="property">
+  <span class="name"><a href="../floss/RRect/wideMiddleRect.html">wideMiddleRect</a></span>
+  <span class="signature">&#8594; <a href="../floss/Rect-class.html">Rect</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="width" class="property">
+  <span class="name"><a href="../floss/RRect/width.html">width</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="contains" class="callable">
+  <span class="name"><a href="../floss/RRect/contains.html">contains</a></span><span class="signature">(<wbr><span class="parameter" id="contains-param-point"><span class="type-annotation"><a href="../floss/Offset-class.html">Offset</a></span> <span class="parameter-name">point</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="deflate" class="callable">
+  <span class="name"><a href="../floss/RRect/deflate.html">deflate</a></span><span class="signature">(<wbr><span class="parameter" id="deflate-param-delta"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">delta</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../floss/RRect-class.html">RRect</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="inflate" class="callable">
+  <span class="name"><a href="../floss/RRect/inflate.html">inflate</a></span><span class="signature">(<wbr><span class="parameter" id="inflate-param-delta"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">delta</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../floss/RRect-class.html">RRect</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="scaleRadii" class="callable">
+  <span class="name"><a href="../floss/RRect/scaleRadii.html">scaleRadii</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="../floss/RRect-class.html">RRect</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="shift" class="callable">
+  <span class="name"><a href="../floss/RRect/shift.html">shift</a></span><span class="signature">(<wbr><span class="parameter" id="shift-param-offset"><span class="type-annotation"><a href="../floss/Offset-class.html">Offset</a></span> <span class="parameter-name">offset</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../floss/RRect-class.html">RRect</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section class="summary offset-anchor" id="static-properties">
+    <h2>Static Properties</h2>
+
+    <dl class="properties">
+        <dt id="zero" class="property">
+  <span class="name"><a href="../floss/RRect/zero.html">zero</a></span>
+  <span class="signature">&#8596; <a href="../floss/RRect-class.html">RRect</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section class="summary offset-anchor" id="static-methods">
+    <h2>Static Methods</h2>
+    <dl class="callables">
+        <dt id="lerp" class="callable">
+  <span class="name"><a href="../floss/RRect/lerp.html">lerp</a></span><span class="signature">(<wbr><span class="parameter" id="lerp-param-a"><span class="type-annotation"><a href="../floss/RRect-class.html">RRect</a>?</span> <span class="parameter-name">a</span>, </span><span class="parameter" id="lerp-param-b"><span class="type-annotation"><a href="../floss/RRect-class.html">RRect</a>?</span> <span class="parameter-name">b</span>, </span><span class="parameter" id="lerp-param-t"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">t</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../floss/RRect-class.html">RRect</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">floss</a></li>
+    <li><a href="../floss/floss-library.html">floss</a></li>
+    <li class="self-crumb">RRect class</li>
+</ol>
+
+
+    <h5>floss library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    floss
+      0.1.0
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="gpu_noise library API docs, for the Dart programming language.">
+  <title>gpu_noise library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">gpu_noise</a></li>
+    <li class="self-crumb">gpu_noise.dart</li>
+  </ol>
+  <div class="self-name">gpu_noise</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar=""
+    data-below-sidebar="gpu_noise&#47;gpu_noise-library-sidebar.html">
+  
+    <div>
+      
+
+      <h1>
+        <span class="kind-library">gpu_noise</span>
+        library 
+ 
+
+      </h1>
+    </div>
+
+    
+<section class="desc markdown">
+  <p>This library provides GPU-based noise generation functions with
+corresponding CustomPainters and a NoiseBytes accessing noise values on the
+CPU.</p>
+<p>The primary components of this library include:</p>
+<ol>
+<li>
+<p><strong>GPU Noise Generation Functions</strong>:</p>
+<ul>
+<li>These functions utilize GPU shaders to generate noise patterns. By
+offloading the computationally intensive task of noise generation to
+the GPU.</li>
+</ul>
+</li>
+<li>
+<p><strong>CustomPainters</strong>:</p>
+<ul>
+<li>The library includes CustomPainters that can be used to render the
+generated noise directly onto the screen.</li>
+</ul>
+</li>
+<li>
+<p><strong>NoiseBytes</strong>:</p>
+<ul>
+<li>This component allows for accessing the generated noise values on the
+CPU. While the primary noise generation happens on the GPU, there are
+scenarios where you might need to access these values on the CPU for
+further processing or analysis. NoiseBytes provides a convenient
+interface for this purpose.</li>
+</ul>
+</li>
+</ol>
+<p>The noise shaders utilized in this library are sourced from the
+<a href="https://github.com/patriciogonzalezvivo/lygia">lygia</a> project.</p>
+<p>Additionally, the <code>example/gallery</code> directory provides a simple interface
+for viewing the noise functions and adjusting their parameters. This example
+gallery serves as both a demonstration of the library's capabilities and a
+useful tool for developers to experiment with different noise parameters and
+see the results in real-time.</p>
+</section>
+
+
+    <section class="summary offset-anchor" id="classes">
+      <h2>Classes</h2>
+
+      <dl>
+          <dt id="GerstnerWave2Painter">
+  <span class="name "><a href="../gpu_noise/GerstnerWave2Painter-class.html">GerstnerWave2Painter</a></span> 
+
+</dt>
+<dd>
+  Subclass of <a href="../gpu_noise/NoisePainter-class.html">NoisePainter</a> that generates 2D Gerstner wave noise and
+requires a <a href="../gpu_noise/GerstnerWave2Painter/steepness.html">steepness</a>, <a href="../gpu_noise/GerstnerWave2Painter/wavelength.html">wavelength</a>, and <a href="../gpu_noise/GerstnerWave2Painter/time.html">time</a> parameter.
+</dd>
+
+          <dt id="Noise2Painter">
+  <span class="name "><a href="../gpu_noise/Noise2Painter-class.html">Noise2Painter</a></span> 
+
+</dt>
+<dd>
+  Subclass of <a href="../gpu_noise/NoisePainter-class.html">NoisePainter</a> that generates 2D noise and requires a
+<a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector2-class.html">vm.Vector2</a> parameter.
+</dd>
+
+          <dt id="Noise3Painter">
+  <span class="name "><a href="../gpu_noise/Noise3Painter-class.html">Noise3Painter</a></span> 
+
+</dt>
+<dd>
+  Subclass of <a href="../gpu_noise/NoisePainter-class.html">NoisePainter</a> that generates 3D noise and requires a
+<a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector3-class.html">vm.Vector3</a> parameter.
+</dd>
+
+          <dt id="Noise4Painter">
+  <span class="name "><a href="../gpu_noise/Noise4Painter-class.html">Noise4Painter</a></span> 
+
+</dt>
+<dd>
+  Subclass of <a href="../gpu_noise/NoisePainter-class.html">NoisePainter</a> that generates 4D noise and requires a
+<a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector4-class.html">vm.Vector4</a> parameter.
+</dd>
+
+          <dt id="NoiseBytes">
+  <span class="name "><a href="../gpu_noise/NoiseBytes-class.html">NoiseBytes</a></span> 
+
+</dt>
+<dd>
+  A class that provides access to the bytes of an image.
+</dd>
+
+          <dt id="NoisePainter">
+  <span class="name "><a href="../gpu_noise/NoisePainter-class.html">NoisePainter</a></span> 
+
+</dt>
+<dd>
+  This abstract class serves as a base class that extends the
+<a href="https://api.flutter.dev/flutter/rendering/CustomPainter-class.html">w.CustomPainter</a> class, providing a common set of parameters and
+functionality for all its subclasses.
+</dd>
+
+          <dt id="PrimitivePeriodTiling2Painter">
+  <span class="name "><a href="../gpu_noise/PrimitivePeriodTiling2Painter-class.html">PrimitivePeriodTiling2Painter</a></span> 
+
+</dt>
+<dd>
+  Subclass of <a href="../gpu_noise/NoisePainter-class.html">NoisePainter</a> that requires a double for the <a href="../gpu_noise/PrimitivePeriodTiling2Painter/period.html">period</a>
+parameter.
+</dd>
+
+          <dt id="PrimitivePeriodTiling3Painter">
+  <span class="name "><a href="../gpu_noise/PrimitivePeriodTiling3Painter-class.html">PrimitivePeriodTiling3Painter</a></span> 
+
+</dt>
+<dd>
+  Subclass of <a href="../gpu_noise/NoisePainter-class.html">NoisePainter</a> that generates 3D noise and requires a double for
+the <a href="../gpu_noise/PrimitivePeriodTiling3Painter/period.html">period</a> parameter.
+</dd>
+
+          <dt id="Tiling2Painter">
+  <span class="name "><a href="../gpu_noise/Tiling2Painter-class.html">Tiling2Painter</a></span> 
+
+</dt>
+<dd>
+  Subclass of <a href="../gpu_noise/NoisePainter-class.html">NoisePainter</a> that generates 2D noise and require a <a href="../gpu_noise/Tiling2Painter/period.html">period</a>
+parameter.
+</dd>
+
+          <dt id="Tiling3Painter">
+  <span class="name "><a href="../gpu_noise/Tiling3Painter-class.html">Tiling3Painter</a></span> 
+
+</dt>
+<dd>
+  Subclass of <a href="../gpu_noise/NoisePainter-class.html">NoisePainter</a> that generate 3D tiling noise and require a
+<a href="../gpu_noise/Tiling3Painter/period.html">period</a> parameter.
+</dd>
+
+          <dt id="Tiling4Painter">
+  <span class="name "><a href="../gpu_noise/Tiling4Painter-class.html">Tiling4Painter</a></span> 
+
+</dt>
+<dd>
+  Subclass of <a href="../gpu_noise/NoisePainter-class.html">NoisePainter</a> that generates 4D tiling noise and requires a
+<a href="../gpu_noise/Tiling4Painter/period.html">period</a> parameter.
+</dd>
+
+          <dt id="TilingSimplexFlow2Painter">
+  <span class="name "><a href="../gpu_noise/TilingSimplexFlow2Painter-class.html">TilingSimplexFlow2Painter</a></span> 
+
+</dt>
+<dd>
+  Subclass of <a href="../gpu_noise/NoisePainter-class.html">NoisePainter</a> that generates 2D tiling Simplex flow noise and
+requires <a href="../gpu_noise/TilingSimplexFlow2Painter/period.html">period</a> and <a href="../gpu_noise/TilingSimplexFlow2Painter/alpha.html">alpha</a> parameters.
+</dd>
+
+          <dt id="TilingSimplexFlow3Painter">
+  <span class="name "><a href="../gpu_noise/TilingSimplexFlow3Painter-class.html">TilingSimplexFlow3Painter</a></span> 
+
+</dt>
+<dd>
+  Subclass of <a href="../gpu_noise/NoisePainter-class.html">NoisePainter</a> that generates 3D Simplex flow noise and requires
+<a href="../gpu_noise/TilingSimplexFlow3Painter/period.html">period</a> and <a href="../gpu_noise/TilingSimplexFlow3Painter/alpha.html">alpha</a> parameters.
+</dd>
+
+          <dt id="Voronoise2Painter">
+  <span class="name "><a href="../gpu_noise/Voronoise2Painter-class.html">Voronoise2Painter</a></span> 
+
+</dt>
+<dd>
+  Subclass of <a href="../gpu_noise/NoisePainter-class.html">NoisePainter</a> that generates 2D Voronoise and requires a <a href="../gpu_noise/Voronoise2Painter/uv.html">uv</a>
+parameter.
+</dd>
+
+          <dt id="Voronoise3Painter">
+  <span class="name "><a href="../gpu_noise/Voronoise3Painter-class.html">Voronoise3Painter</a></span> 
+
+</dt>
+<dd>
+  Subclass of <a href="../gpu_noise/NoisePainter-class.html">NoisePainter</a> that generates 3D Voronoise and requires a <a href="../gpu_noise/Voronoise3Painter/uv.html">uv</a>
+parameter.
+</dd>
+
+          <dt id="VoronoiTime2Painter">
+  <span class="name "><a href="../gpu_noise/VoronoiTime2Painter-class.html">VoronoiTime2Painter</a></span> 
+
+</dt>
+<dd>
+  Subclass of <a href="../gpu_noise/Noise2Painter-class.html">Noise2Painter</a> that generates Voronoi noise and  requires a
+<a href="../gpu_noise/VoronoiTime2Painter/time.html">time</a> parameter.
+</dd>
+
+          <dt id="Wavelet2Painter">
+  <span class="name "><a href="../gpu_noise/Wavelet2Painter-class.html">Wavelet2Painter</a></span> 
+
+</dt>
+<dd>
+  Subclass of <a href="../gpu_noise/NoisePainter-class.html">NoisePainter</a> that generates 2D wavelet noise and requires
+<a href="../gpu_noise/Wavelet2Painter/phase.html">phase</a> and <a href="../gpu_noise/Wavelet2Painter/k.html">k</a> parameters.
+</dd>
+
+      </dl>
+    </section>
+
+
+
+
+
+
+
+    <section class="summary offset-anchor" id="functions">
+      <h2>Functions</h2>
+
+      <dl class="callables">
+          <dt id="cellular2Image" class="callable">
+  <span class="name"><a href="../gpu_noise/cellular2Image.html">cellular2Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="cellular2Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="cellular2Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="cellular2Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="cellular2Image-param-xy"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector2-class.html">Vector2</a></span> <span class="parameter-name">xy</span>, </span><span class="parameter" id="cellular2Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a cellular noise image.
+  
+
+</dd>
+
+          <dt id="cellular2x2Image" class="callable">
+  <span class="name"><a href="../gpu_noise/cellular2x2Image.html">cellular2x2Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="cellular2x2Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="cellular2x2Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="cellular2x2Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="cellular2x2Image-param-xy"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector2-class.html">Vector2</a></span> <span class="parameter-name">xy</span>, </span><span class="parameter" id="cellular2x2Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 2D 2x2 cellular noise image.
+  
+
+</dd>
+
+          <dt id="cellular2x2x2Image" class="callable">
+  <span class="name"><a href="../gpu_noise/cellular2x2x2Image.html">cellular2x2x2Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="cellular2x2x2Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="cellular2x2x2Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="cellular2x2x2Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="cellular2x2x2Image-param-xyz"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector3-class.html">Vector3</a></span> <span class="parameter-name">xyz</span>, </span><span class="parameter" id="cellular2x2x2Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 3D 2x2x2 cellular noise image.
+  
+
+</dd>
+
+          <dt id="cellular3Image" class="callable">
+  <span class="name"><a href="../gpu_noise/cellular3Image.html">cellular3Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="cellular3Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="cellular3Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="cellular3Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="cellular3Image-param-xyz"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector3-class.html">Vector3</a></span> <span class="parameter-name">xyz</span>, </span><span class="parameter" id="cellular3Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 3-dimensional cellular noise image.
+  
+
+</dd>
+
+          <dt id="curl2Image" class="callable">
+  <span class="name"><a href="../gpu_noise/curl2Image.html">curl2Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="curl2Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="curl2Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="curl2Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="curl2Image-param-xy"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector2-class.html">Vector2</a></span> <span class="parameter-name">xy</span>, </span><span class="parameter" id="curl2Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates an image using the curl noise algorithm.
+  
+
+</dd>
+
+          <dt id="curl3Image" class="callable">
+  <span class="name"><a href="../gpu_noise/curl3Image.html">curl3Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="curl3Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="curl3Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="curl3Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="curl3Image-param-xyz"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector3-class.html">Vector3</a></span> <span class="parameter-name">xyz</span>, </span><span class="parameter" id="curl3Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 3D curl noise image.
+  
+
+</dd>
+
+          <dt id="curl4Image" class="callable">
+  <span class="name"><a href="../gpu_noise/curl4Image.html">curl4Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="curl4Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="curl4Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="curl4Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="curl4Image-param-xyzw"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector4-class.html">Vector4</a></span> <span class="parameter-name">xyzw</span>, </span><span class="parameter" id="curl4Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 4D curl noise image.
+  
+
+</dd>
+
+          <dt id="fbm2Image" class="callable">
+  <span class="name"><a href="../gpu_noise/fbm2Image.html">fbm2Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="fbm2Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="fbm2Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="fbm2Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="fbm2Image-param-xy"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector2-class.html">Vector2</a></span> <span class="parameter-name">xy</span>, </span><span class="parameter" id="fbm2Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 2D fractal brownian motion (FBM) image.
+  
+
+</dd>
+
+          <dt id="fbm3Image" class="callable">
+  <span class="name"><a href="../gpu_noise/fbm3Image.html">fbm3Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="fbm3Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="fbm3Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="fbm3Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="fbm3Image-param-xyz"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector3-class.html">Vector3</a></span> <span class="parameter-name">xyz</span>, </span><span class="parameter" id="fbm3Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 3D fractal Brownian motion (FBM) image.
+  
+
+</dd>
+
+          <dt id="gerstnerWaveImage" class="callable">
+  <span class="name"><a href="../gpu_noise/gerstnerWaveImage.html">gerstnerWaveImage</a></span><span class="signature">(<wbr>{<span class="parameter" id="gerstnerWaveImage-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="gerstnerWaveImage-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="gerstnerWaveImage-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="gerstnerWaveImage-param-xy"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector2-class.html">Vector2</a></span> <span class="parameter-name">xy</span>, </span><span class="parameter" id="gerstnerWaveImage-param-dir"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector2-class.html">Vector2</a></span> <span class="parameter-name">dir</span>, </span><span class="parameter" id="gerstnerWaveImage-param-steepness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">steepness</span>, </span><span class="parameter" id="gerstnerWaveImage-param-wavelength"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">wavelength</span>, </span><span class="parameter" id="gerstnerWaveImage-param-time"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">time</span>, </span><span class="parameter" id="gerstnerWaveImage-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 2D Gerstner wave image.
+  
+
+</dd>
+
+          <dt id="gradient2Image" class="callable">
+  <span class="name"><a href="../gpu_noise/gradient2Image.html">gradient2Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="gradient2Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="gradient2Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="gradient2Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="gradient2Image-param-xy"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector2-class.html">Vector2</a></span> <span class="parameter-name">xy</span>, </span><span class="parameter" id="gradient2Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 2D gradient image.
+  
+
+</dd>
+
+          <dt id="gradient3Image" class="callable">
+  <span class="name"><a href="../gpu_noise/gradient3Image.html">gradient3Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="gradient3Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="gradient3Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="gradient3Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="gradient3Image-param-xyz"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector3-class.html">Vector3</a></span> <span class="parameter-name">xyz</span>, </span><span class="parameter" id="gradient3Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates 3D gradient noise image.
+  
+
+</dd>
+
+          <dt id="load" class="callable">
+  <span class="name"><a href="../gpu_noise/load.html">load</a></span><span class="signature">(<wbr><span class="parameter" id="load-param-path"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">path</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/FragmentShader-class.html">FragmentShader</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Loads a fragment shader from the specified asset path.
+  
+
+</dd>
+
+          <dt id="perlin2Image" class="callable">
+  <span class="name"><a href="../gpu_noise/perlin2Image.html">perlin2Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="perlin2Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="perlin2Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="perlin2Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="perlin2Image-param-xy"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector2-class.html">Vector2</a></span> <span class="parameter-name">xy</span>, </span><span class="parameter" id="perlin2Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 2D Perlin noise image.
+  
+
+</dd>
+
+          <dt id="perlin3Image" class="callable">
+  <span class="name"><a href="../gpu_noise/perlin3Image.html">perlin3Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="perlin3Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="perlin3Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="perlin3Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="perlin3Image-param-xyz"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector3-class.html">Vector3</a></span> <span class="parameter-name">xyz</span>, </span><span class="parameter" id="perlin3Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 3D Perlin noise image.
+  
+
+</dd>
+
+          <dt id="perlin4Image" class="callable">
+  <span class="name"><a href="../gpu_noise/perlin4Image.html">perlin4Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="perlin4Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="perlin4Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="perlin4Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="perlin4Image-param-xyzw"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector4-class.html">Vector4</a></span> <span class="parameter-name">xyzw</span>, </span><span class="parameter" id="perlin4Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 4D Perlin noise image.
+  
+
+</dd>
+
+          <dt id="psrd2Image" class="callable">
+  <span class="name"><a href="../gpu_noise/psrd2Image.html">psrd2Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="psrd2Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="psrd2Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="psrd2Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="psrd2Image-param-xy"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector2-class.html">Vector2</a></span> <span class="parameter-name">xy</span>, </span><span class="parameter" id="psrd2Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 2D tiling Simplex flow noise image.
+  
+
+</dd>
+
+          <dt id="psrd3Image" class="callable">
+  <span class="name"><a href="../gpu_noise/psrd3Image.html">psrd3Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="psrd3Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="psrd3Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="psrd3Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="psrd3Image-param-xyz"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector3-class.html">Vector3</a></span> <span class="parameter-name">xyz</span>, </span><span class="parameter" id="psrd3Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 3D tiling Simplex flow noise image.
+  
+
+</dd>
+
+          <dt id="random2Image" class="callable">
+  <span class="name"><a href="../gpu_noise/random2Image.html">random2Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="random2Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="random2Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="random2Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="random2Image-param-xy"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector2-class.html">Vector2</a></span> <span class="parameter-name">xy</span>, </span><span class="parameter" id="random2Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 2D random noise image.
+  
+
+</dd>
+
+          <dt id="random3Image" class="callable">
+  <span class="name"><a href="../gpu_noise/random3Image.html">random3Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="random3Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="random3Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="random3Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="random3Image-param-xyz"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector3-class.html">Vector3</a></span> <span class="parameter-name">xyz</span>, </span><span class="parameter" id="random3Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 3D random noise image.
+  
+
+</dd>
+
+          <dt id="random4Image" class="callable">
+  <span class="name"><a href="../gpu_noise/random4Image.html">random4Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="random4Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="random4Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="random4Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="random4Image-param-xyzw"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector4-class.html">Vector4</a></span> <span class="parameter-name">xyzw</span>, </span><span class="parameter" id="random4Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 4D random noise image.
+  
+
+</dd>
+
+          <dt id="signedRandom2Image" class="callable">
+  <span class="name"><a href="../gpu_noise/signedRandom2Image.html">signedRandom2Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="signedRandom2Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="signedRandom2Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="signedRandom2Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="signedRandom2Image-param-xy"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector2-class.html">Vector2</a></span> <span class="parameter-name">xy</span>, </span><span class="parameter" id="signedRandom2Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 2D signed random noise image.
+  
+
+</dd>
+
+          <dt id="signedRandom3Image" class="callable">
+  <span class="name"><a href="../gpu_noise/signedRandom3Image.html">signedRandom3Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="signedRandom3Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="signedRandom3Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="signedRandom3Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="signedRandom3Image-param-xyz"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector3-class.html">Vector3</a></span> <span class="parameter-name">xyz</span>, </span><span class="parameter" id="signedRandom3Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 3D signed random noise image.
+  
+
+</dd>
+
+          <dt id="signedRandom4Image" class="callable">
+  <span class="name"><a href="../gpu_noise/signedRandom4Image.html">signedRandom4Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="signedRandom4Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="signedRandom4Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="signedRandom4Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="signedRandom4Image-param-xyzw"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector4-class.html">Vector4</a></span> <span class="parameter-name">xyzw</span>, </span><span class="parameter" id="signedRandom4Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 4D signed random noise image.
+  
+
+</dd>
+
+          <dt id="simplex2Image" class="callable">
+  <span class="name"><a href="../gpu_noise/simplex2Image.html">simplex2Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="simplex2Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="simplex2Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="simplex2Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="simplex2Image-param-xy"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector2-class.html">Vector2</a></span> <span class="parameter-name">xy</span>, </span><span class="parameter" id="simplex2Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 2D simplex noise image.
+  
+
+</dd>
+
+          <dt id="simplex3Image" class="callable">
+  <span class="name"><a href="../gpu_noise/simplex3Image.html">simplex3Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="simplex3Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="simplex3Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="simplex3Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="simplex3Image-param-xyz"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector3-class.html">Vector3</a></span> <span class="parameter-name">xyz</span>, </span><span class="parameter" id="simplex3Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 3D simplex noise image.
+  
+
+</dd>
+
+          <dt id="simplex4Image" class="callable">
+  <span class="name"><a href="../gpu_noise/simplex4Image.html">simplex4Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="simplex4Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="simplex4Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="simplex4Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="simplex4Image-param-xyzw"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector4-class.html">Vector4</a></span> <span class="parameter-name">xyzw</span>, </span><span class="parameter" id="simplex4Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 4D simplex noise image.
+  
+
+</dd>
+
+          <dt id="tilingFbm3Image" class="callable">
+  <span class="name"><a href="../gpu_noise/tilingFbm3Image.html">tilingFbm3Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="tilingFbm3Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="tilingFbm3Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="tilingFbm3Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="tilingFbm3Image-param-xyz"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector3-class.html">Vector3</a></span> <span class="parameter-name">xyz</span>, </span><span class="parameter" id="tilingFbm3Image-param-period"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">period</span>, </span><span class="parameter" id="tilingFbm3Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 2D tiling FBM noise image.
+  
+
+</dd>
+
+          <dt id="tilingGradient3Image" class="callable">
+  <span class="name"><a href="../gpu_noise/tilingGradient3Image.html">tilingGradient3Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="tilingGradient3Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="tilingGradient3Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="tilingGradient3Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="tilingGradient3Image-param-xyz"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector3-class.html">Vector3</a></span> <span class="parameter-name">xyz</span>, </span><span class="parameter" id="tilingGradient3Image-param-period"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">period</span>, </span><span class="parameter" id="tilingGradient3Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 3D tiling gradient noise image.
+  
+
+</dd>
+
+          <dt id="tilingPerlin2Image" class="callable">
+  <span class="name"><a href="../gpu_noise/tilingPerlin2Image.html">tilingPerlin2Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="tilingPerlin2Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="tilingPerlin2Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="tilingPerlin2Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="tilingPerlin2Image-param-xy"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector2-class.html">Vector2</a></span> <span class="parameter-name">xy</span>, </span><span class="parameter" id="tilingPerlin2Image-param-period"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector2-class.html">Vector2</a></span> <span class="parameter-name">period</span>, </span><span class="parameter" id="tilingPerlin2Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 2D tiling Perlin noise image.
+  
+
+</dd>
+
+          <dt id="tilingPerlin3Image" class="callable">
+  <span class="name"><a href="../gpu_noise/tilingPerlin3Image.html">tilingPerlin3Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="tilingPerlin3Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="tilingPerlin3Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="tilingPerlin3Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="tilingPerlin3Image-param-xyz"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector3-class.html">Vector3</a></span> <span class="parameter-name">xyz</span>, </span><span class="parameter" id="tilingPerlin3Image-param-period"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector3-class.html">Vector3</a></span> <span class="parameter-name">period</span>, </span><span class="parameter" id="tilingPerlin3Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 3D tiling Perlin noise image.
+  
+
+</dd>
+
+          <dt id="tilingPerlin4Image" class="callable">
+  <span class="name"><a href="../gpu_noise/tilingPerlin4Image.html">tilingPerlin4Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="tilingPerlin4Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="tilingPerlin4Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="tilingPerlin4Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="tilingPerlin4Image-param-xyzw"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector4-class.html">Vector4</a></span> <span class="parameter-name">xyzw</span>, </span><span class="parameter" id="tilingPerlin4Image-param-period"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector4-class.html">Vector4</a></span> <span class="parameter-name">period</span>, </span><span class="parameter" id="tilingPerlin4Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 4D tiling Perlin noise image.
+  
+
+</dd>
+
+          <dt id="tilingSignedRandom2Image" class="callable">
+  <span class="name"><a href="../gpu_noise/tilingSignedRandom2Image.html">tilingSignedRandom2Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="tilingSignedRandom2Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="tilingSignedRandom2Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="tilingSignedRandom2Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="tilingSignedRandom2Image-param-xy"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector2-class.html">Vector2</a></span> <span class="parameter-name">xy</span>, </span><span class="parameter" id="tilingSignedRandom2Image-param-period"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">period</span>, </span><span class="parameter" id="tilingSignedRandom2Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 2D tiling signed random noise image.
+  
+
+</dd>
+
+          <dt id="tilingSignedRandom3Image" class="callable">
+  <span class="name"><a href="../gpu_noise/tilingSignedRandom3Image.html">tilingSignedRandom3Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="tilingSignedRandom3Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="tilingSignedRandom3Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="tilingSignedRandom3Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="tilingSignedRandom3Image-param-xyz"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector3-class.html">Vector3</a></span> <span class="parameter-name">xyz</span>, </span><span class="parameter" id="tilingSignedRandom3Image-param-period"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">period</span>, </span><span class="parameter" id="tilingSignedRandom3Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 3D tiling signed random noise image.
+  
+
+</dd>
+
+          <dt id="tilingSimplex2Image" class="callable">
+  <span class="name"><a href="../gpu_noise/tilingSimplex2Image.html">tilingSimplex2Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="tilingSimplex2Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="tilingSimplex2Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="tilingSimplex2Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="tilingSimplex2Image-param-xy"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector2-class.html">Vector2</a></span> <span class="parameter-name">xy</span>, </span><span class="parameter" id="tilingSimplex2Image-param-period"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector2-class.html">Vector2</a></span> <span class="parameter-name">period</span>, </span><span class="parameter" id="tilingSimplex2Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 2D tiling Simplex noise image.
+  
+
+</dd>
+
+          <dt id="tilingSimplex3Image" class="callable">
+  <span class="name"><a href="../gpu_noise/tilingSimplex3Image.html">tilingSimplex3Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="tilingSimplex3Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="tilingSimplex3Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="tilingSimplex3Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="tilingSimplex3Image-param-xyz"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector3-class.html">Vector3</a></span> <span class="parameter-name">xyz</span>, </span><span class="parameter" id="tilingSimplex3Image-param-period"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector3-class.html">Vector3</a></span> <span class="parameter-name">period</span>, </span><span class="parameter" id="tilingSimplex3Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 3D tiling Simplex noise image.
+  
+
+</dd>
+
+          <dt id="tilingSimplexFlow2Image" class="callable">
+  <span class="name"><a href="../gpu_noise/tilingSimplexFlow2Image.html">tilingSimplexFlow2Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="tilingSimplexFlow2Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="tilingSimplexFlow2Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="tilingSimplexFlow2Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="tilingSimplexFlow2Image-param-xy"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector2-class.html">Vector2</a></span> <span class="parameter-name">xy</span>, </span><span class="parameter" id="tilingSimplexFlow2Image-param-period"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector2-class.html">Vector2</a></span> <span class="parameter-name">period</span>, </span><span class="parameter" id="tilingSimplexFlow2Image-param-alpha"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">alpha</span>, </span><span class="parameter" id="tilingSimplexFlow2Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 2D tiling Simplex flow noise image.
+  
+
+</dd>
+
+          <dt id="tilingSimplexFlow3Image" class="callable">
+  <span class="name"><a href="../gpu_noise/tilingSimplexFlow3Image.html">tilingSimplexFlow3Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="tilingSimplexFlow3Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="tilingSimplexFlow3Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="tilingSimplexFlow3Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="tilingSimplexFlow3Image-param-xyz"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector3-class.html">Vector3</a></span> <span class="parameter-name">xyz</span>, </span><span class="parameter" id="tilingSimplexFlow3Image-param-period"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector3-class.html">Vector3</a></span> <span class="parameter-name">period</span>, </span><span class="parameter" id="tilingSimplexFlow3Image-param-alpha"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">alpha</span>, </span><span class="parameter" id="tilingSimplexFlow3Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 3D tiling Simplex flow noise image.
+  
+
+</dd>
+
+          <dt id="toImage" class="callable">
+  <span class="name"><a href="../gpu_noise/toImage.html">toImage</a></span><span class="signature">(<wbr><span class="parameter" id="toImage-param-painter"><span class="type-annotation"><a href="../gpu_noise/NoisePainter-class.html">NoisePainter</a></span> <span class="parameter-name">painter</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Converts the noise painter to an image asynchronously.
+  
+
+</dd>
+
+          <dt id="voronoi2Image" class="callable">
+  <span class="name"><a href="../gpu_noise/voronoi2Image.html">voronoi2Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="voronoi2Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="voronoi2Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="voronoi2Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="voronoi2Image-param-xy"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector2-class.html">Vector2</a></span> <span class="parameter-name">xy</span>, </span><span class="parameter" id="voronoi2Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 2D Voronoi noise image.
+  
+
+</dd>
+
+          <dt id="voronoi3Image" class="callable">
+  <span class="name"><a href="../gpu_noise/voronoi3Image.html">voronoi3Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="voronoi3Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="voronoi3Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="voronoi3Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="voronoi3Image-param-xyz"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector3-class.html">Vector3</a></span> <span class="parameter-name">xyz</span>, </span><span class="parameter" id="voronoi3Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 3D Voronoi noise image.
+  
+
+</dd>
+
+          <dt id="voronoise2Image" class="callable">
+  <span class="name"><a href="../gpu_noise/voronoise2Image.html">voronoise2Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="voronoise2Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="voronoise2Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="voronoise2Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="voronoise2Image-param-xy"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector2-class.html">Vector2</a></span> <span class="parameter-name">xy</span>, </span><span class="parameter" id="voronoise2Image-param-uv"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector2-class.html">Vector2</a></span> <span class="parameter-name">uv</span>, </span><span class="parameter" id="voronoise2Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 2D Voronoi noise image.
+  
+
+</dd>
+
+          <dt id="voronoise3Image" class="callable">
+  <span class="name"><a href="../gpu_noise/voronoise3Image.html">voronoise3Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="voronoise3Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="voronoise3Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="voronoise3Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="voronoise3Image-param-xyz"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector3-class.html">Vector3</a></span> <span class="parameter-name">xyz</span>, </span><span class="parameter" id="voronoise3Image-param-uv"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector2-class.html">Vector2</a></span> <span class="parameter-name">uv</span>, </span><span class="parameter" id="voronoise3Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 3D Voronoi noise image.
+  
+
+</dd>
+
+          <dt id="voronoiTime2Image" class="callable">
+  <span class="name"><a href="../gpu_noise/voronoiTime2Image.html">voronoiTime2Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="voronoiTime2Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="voronoiTime2Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="voronoiTime2Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="voronoiTime2Image-param-xy"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector2-class.html">Vector2</a></span> <span class="parameter-name">xy</span>, </span><span class="parameter" id="voronoiTime2Image-param-time"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">time</span>, </span><span class="parameter" id="voronoiTime2Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 2D Voronoi noise image parameterized by <code>time</code>.
+  
+
+</dd>
+
+          <dt id="wavelet2Image" class="callable">
+  <span class="name"><a href="../gpu_noise/wavelet2Image.html">wavelet2Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="wavelet2Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="wavelet2Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="wavelet2Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="wavelet2Image-param-xy"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector2-class.html">Vector2</a></span> <span class="parameter-name">xy</span>, </span><span class="parameter" id="wavelet2Image-param-phase"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">phase</span>, </span><span class="parameter" id="wavelet2Image-param-k"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">k</span>, </span><span class="parameter" id="wavelet2Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 2D wavelet noise image.
+  
+
+</dd>
+
+          <dt id="worley2Image" class="callable">
+  <span class="name"><a href="../gpu_noise/worley2Image.html">worley2Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="worley2Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="worley2Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="worley2Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="worley2Image-param-xy"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector2-class.html">Vector2</a></span> <span class="parameter-name">xy</span>, </span><span class="parameter" id="worley2Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 3D wavelet noise image.
+  
+
+</dd>
+
+          <dt id="worley3Image" class="callable">
+  <span class="name"><a href="../gpu_noise/worley3Image.html">worley3Image</a></span><span class="signature">(<wbr>{<span class="parameter" id="worley3Image-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="worley3Image-param-scale"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="worley3Image-param-brightness"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="worley3Image-param-xyz"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/vector_math/2.1.4/vector_math/Vector3-class.html">Vector3</a></span> <span class="parameter-name">xyz</span>, </span><span class="parameter" id="worley3Image-param-elapsed"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">elapsed</span> = <span class="default-value">0.0</span></span>})
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Generates a 3D Worley noise image.
+  
+
+</dd>
+
+      </dl>
+    </section>
+
+
+    <section class="summary offset-anchor" id="exceptions">
+      <h2>Exceptions / Errors</h2>
+
+      <dl>
+          <dt id="ImageDecodeException">
+  <span class="name "><a href="../gpu_noise/ImageDecodeException-class.html">ImageDecodeException</a></span> 
+
+</dt>
+<dd>
+  Exception thrown when an image cannot be decoded by <a href="../gpu_noise/NoiseBytes-class.html">NoiseBytes</a>.
+</dd>
+
+      </dl>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">gpu_noise</a></li>
+    <li class="self-crumb">gpu_noise.dart</li>
+</ol>
+
+
+    <h5><span class="package-name">gpu_noise</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="../gpu_noise/gpu_noise-library.html">gpu_noise</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <h5>gpu_noise library</h5>
+  </div><!--/sidebar-offcanvas-right-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    gpu_noise
+      0.0.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+
