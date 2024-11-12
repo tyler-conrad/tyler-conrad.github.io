@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="pub_dev_browser_lib API docs, for the Dart programming language.">
+  <title>pub_dev_browser_lib - Dart API docs</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li class="self-crumb">pub_dev_browser_lib package</li>
+  </ol>
+  <div class="self-name">pub_dev_browser_lib</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      
+<section class="desc markdown">
+  <h1 id="pub_dev_browser_lib">pub_dev_browser_lib</h1>
+<p>A Flutter library for browsing project documentation from
+<a href="https://pub.dev">pub.dev</a>.</p>
+<p><img src="demo.gif" alt=""></p>
+<p>This library is primarily designed to be used in the
+<a href="example/pub_dev_browser">pub_dev_browser</a> application but includes reusable
+widgets and components. It provides full-text search with various filters using
+the <a href="https://pub.dev/packages/pub_api_client">pub_api_client</a> library and fuzzy
+matching package name search using the
+<a href="https://pub.dev/packages/fuzzywuzzy">fuzzywuzzy</a> and
+<a href="https://pub.dev/packages/flutter_typeahead">flutter_typeahead</a> packages. The
+<a href="https://pub.dev/packages/flutter_markdown">flutter_markdown</a> package is used to
+render <code>README.md</code> files from GitHub repositories.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li><strong>BLoC Architecture</strong>: Utilizes the BLoC pattern for managing state and
+business logic, ensuring a clear separation of concerns and making the
+codebase more maintainable and testable.</li>
+<li><strong>Search Screen</strong>: Implements a search screen with text-highlighting for
+full-text search queries. It supports configurable tags and sorting orders,
+and includes a fuzzy matching package name search feature.</li>
+<li><strong>Paginated Search Results</strong>: Provides a paginated search results screen where
+queries can be progressively built using tappable elements of results such as
+topics, platforms, SDKs, and publishers.</li>
+<li><strong>Package Details Page</strong>: Features a comprehensive package details page that
+includes:
+<ul>
+<li>Human-readable duration since the last update</li>
+<li>Publisher information</li>
+<li>Supported SDKs and platforms</li>
+<li>Scores for Pub Points, Likes, and Popularity</li>
+<li>Tappable dependencies that navigate directly to the package</li>
+<li>Rendered <code>README.md</code> files from GitHub repositories</li>
+</ul>
+</li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<p>To explore all the functionalities provided by this library, run the
+<a href="example/pub_dev_browser">pub_dev_browser</a> (<code>example/pub_dev_browser</code>) Flutter
+application. This application integrates all the features mentioned above into a
+single browser for <a href="https://pub.dev">pub.dev</a>.</p>
+<h2 id="usage">Usage</h2>
+<p>Clone the repository:</p>
+<pre class="language-sh"><code class="language-sh">git clone https://github.com/tyler-conrad/pub_dev_browser_lib.git
+</code></pre>
+<p>Navigate to the example application directory:</p>
+<pre class="language-sh"><code class="language-sh">cd example/pub_dev_browser
+</code></pre>
+<p>Run the application on your desired device:</p>
+<pre class="language-sh"><code class="language-sh">dart run -d &lt;device&gt;
+</code></pre>
+<p>Replace <code>&lt;device&gt;</code> with the device ID. For example, to run on macOS:</p>
+<pre class="language-sh"><code class="language-sh">dart run -d macos
+</code></pre>
+<h2 id="additional-information">Additional information</h2>
+<p>For more detailed information on how to use and extend this library, refer to
+the documentation. If you encounter any issues or have suggestions for
+improvements, feel free to open an issue or submit a pull request on the GitHub
+repository.</p>
+</section>
+
+
+      <section class="summary">
+          <h2>Libraries</h2>
+        <dl>
+          <dt id="pub_dev_browser_lib">
+  <span class="name"><a href="pub_dev_browser_lib/pub_dev_browser_lib-library.html">pub_dev_browser_lib</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+        </dl>
+      </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li class="self-crumb">pub_dev_browser_lib package</li>
+</ol>
+
+
+    <h5 class="hidden-xs"><span class="package-name">pub_dev_browser_lib</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="pub_dev_browser_lib/pub_dev_browser_lib-library.html">pub_dev_browser_lib</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div>
+
+</main>
+
+<footer>
+  <span class="no-break">
+    pub_dev_browser_lib
+      0.0.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

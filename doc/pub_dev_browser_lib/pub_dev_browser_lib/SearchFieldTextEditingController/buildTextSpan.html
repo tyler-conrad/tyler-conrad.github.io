@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the buildTextSpan method from the SearchFieldTextEditingController class, for the Dart programming language.">
+  <title>buildTextSpan method - SearchFieldTextEditingController class - pub_dev_browser_lib library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">pub_dev_browser_lib</a></li>
+    <li><a href="../../pub_dev_browser_lib/pub_dev_browser_lib-library.html">pub_dev_browser_lib.dart</a></li>
+    <li><a href="../../pub_dev_browser_lib/SearchFieldTextEditingController-class.html">SearchFieldTextEditingController</a></li>
+    <li class="self-crumb">buildTextSpan method</li>
+  </ol>
+  <div class="self-name">buildTextSpan</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="pub_dev_browser_lib&#47;SearchFieldTextEditingController-class-sidebar.html"
+    data-below-sidebar="">
+    <div>
+<h1><span class="kind-method">buildTextSpan</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+  <div>
+    <ol class="annotation-list">
+        <li>@<a href="https://api.flutter.dev/flutter/dart-core/override-constant.html">override</a></li>
+    </ol>
+  </div>
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/painting/TextSpan-class.html">TextSpan</a></span>
+<span class="name ">buildTextSpan</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="buildTextSpan-param-context"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span></li>
+<li><span class="parameter" id="buildTextSpan-param-style"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">style</span>, </span></li>
+<li><span class="parameter" id="buildTextSpan-param-withComposing"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">withComposing</span>, </span></li>
+</ol>})
+
+      <div class="features"><span class="feature">override</span></div>
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Builds <a href="https://api.flutter.dev/flutter/painting/TextSpan-class.html">TextSpan</a> from current editing value.</p>
+<p>By default makes text in composing range appear as underlined. Descendants
+can override this method to customize appearance of text.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">@override
+m.TextSpan buildTextSpan({
+  required m.BuildContext context,
+  m.TextStyle? style,
+  required bool withComposing,
+}) {
+  final colorScheme = m.Theme.of(context).colorScheme;
+  final children = &lt;m.TextSpan&gt;[];
+
+  for (final part in allMatchesWithSep(text, whitespaceRegExp)) {
+    final qualifier =
+        qualifiers.firstWhere((q) =&gt; RegExp(q.regExp).hasMatch(part));
+    final match = RegExp(qualifier.regExp).firstMatch(part);
+
+    final styles = switch (qualifier) {
+      _DependencySearchFieldQualifier() =&gt; QualifierStyle(
+          key: m.TextStyle(color: colorScheme.secondary),
+          value: m.TextStyle(color: colorScheme.primary),
+        ),
+      _HasSearchFieldQualifier() =&gt; QualifierStyle(
+          key: m.TextStyle(color: colorScheme.secondary),
+          value: m.TextStyle(color: colorScheme.primary),
+        ),
+      _IsSearchFieldQualifier() =&gt; QualifierStyle(
+          key: m.TextStyle(color: colorScheme.secondary),
+          value: m.TextStyle(color: colorScheme.primary),
+        ),
+      _LicenseSearchFieldQualifier() =&gt; QualifierStyle(
+          key: m.TextStyle(color: colorScheme.secondary),
+          value: m.TextStyle(color: colorScheme.primary),
+        ),
+      _PlatformSearchFieldQualifier() =&gt; QualifierStyle(
+          key: m.TextStyle(color: colorScheme.secondary),
+          value: m.TextStyle(color: colorScheme.primary),
+        ),
+      _PublisherSearchFieldQualifier() =&gt; QualifierStyle(
+          key: m.TextStyle(color: colorScheme.secondary),
+          value: m.TextStyle(color: colorScheme.primary),
+        ),
+      _SdkSearchFieldQualifier() =&gt; QualifierStyle(
+          key: m.TextStyle(color: colorScheme.secondary),
+          value: m.TextStyle(color: colorScheme.primary),
+        ),
+      _ShowSearchFieldQualifier() =&gt; QualifierStyle(
+          key: m.TextStyle(color: colorScheme.secondary),
+          value: m.TextStyle(color: colorScheme.primary),
+        ),
+      _TopicSearchFieldQualifier() =&gt; QualifierStyle(
+          key: m.TextStyle(color: colorScheme.outline),
+          value: m.TextStyle(color: colorScheme.tertiary),
+        ),
+      _SortSearchFieldQualifier() =&gt; QualifierStyle(
+          key: m.TextStyle(color: colorScheme.outline),
+          value: m.TextStyle(color: colorScheme.tertiaryContainer),
+        ),
+      _TextSearch() =&gt; SearchStyle(
+          style: m.TextStyle(color: colorScheme.primaryContainer),
+        ),
+    };
+
+    switch (styles) {
+      case SearchStyle(:final style):
+        if (part == &#39;&#39;) {
+          children.add(m.TextSpan(
+            text: &#39;&#39;,
+            style: style,
+          ));
+        } else if (whitespaceRegExp.hasMatch(part)) {
+          children.add(m.TextSpan(
+            text: part,
+            style: style,
+          ));
+        } else {
+          children.add(m.TextSpan(
+            text: part,
+            style: m.TextStyle(color: colorScheme.primaryContainer),
+          ));
+        }
+        break;
+      case QualifierStyle(:final key, :final value):
+        children.add(m.TextSpan(
+          text: match?.group(1),
+          style: key,
+        ));
+
+        children.add(m.TextSpan(
+          text: match?.group(2),
+          style: m.TextStyle(color: colorScheme.primaryContainer),
+        ));
+
+        children.add(m.TextSpan(
+          text: match?.group(3),
+          style: value,
+        ));
+        break;
+    }
+  }
+  return m.TextSpan(style: style, children: children);
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">pub_dev_browser_lib</a></li>
+    <li><a href="../../pub_dev_browser_lib/pub_dev_browser_lib-library.html">pub_dev_browser_lib</a></li>
+    <li><a href="../../pub_dev_browser_lib/SearchFieldTextEditingController-class.html">SearchFieldTextEditingController</a></li>
+    <li class="self-crumb">buildTextSpan method</li>
+</ol>
+
+
+    <h5>SearchFieldTextEditingController class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+</div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    pub_dev_browser_lib
+      0.0.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+
