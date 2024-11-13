@@ -668,7 +668,7 @@ auo(a){var s=0,r=A.W(t.Lk),q,p=2,o,n,m,l,k
 var $async$pQ=A.X(function(b,c){if(b===1){o=c
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return A.a1(A.eY(self.window.fetch(a),t.e),$async$pQ)
+return A.a1(A.eY(self.window.fetch(a + '?v=0.1.36'),t.e),$async$pQ)
 case 7:n=c
 q=new A.Bx(a,n)
 s=1

@@ -672,7 +672,7 @@ ajA(a){var s=0,r=A.K(t.fF),q,p=2,o,n,m,l,k
 var $async$n9=A.L(function(b,c){if(b===1){o=c
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return A.R(A.dP(self.window.fetch(a),t.e),$async$n9)
+return A.R(A.dP(self.window.fetch(a + '?v=0.1.212'),t.e),$async$n9)
 case 7:n=c
 q=new A.xo(a,n)
 s=1

@@ -602,7 +602,7 @@ avy(a){var s=0,r=A.X(t.Lk),q,p=2,o,n,m,l,k
 var $async$pV=A.Y(function(b,c){if(b===1){o=c
 s=p}while(true)switch(s){case 0:p=4
 s=7
-return A.a2(A.hs(self.window.fetch(a),t.e),$async$pV)
+return A.a2(A.hs(self.window.fetch(a + '?v=0.1.24'),t.e),$async$pV)
 case 7:n=c
 q=new A.AS(a,n)
 s=1
