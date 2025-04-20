@@ -16,21 +16,17 @@
   <link rel="stylesheet" href="../static-assets/github.css?v1">
   <link rel="stylesheet" href="../static-assets/styles.css?v1">
   <link rel="icon" href="../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">floss</a></li>
-    <li><a href="../floss/floss-library.html">floss.dart</a></li>
-    <li class="self-crumb">IudBase<span class="signature">&lt;<wbr><span class="type-parameter">M extends <a href="../floss/Model-class.html">Model</a></span>&gt;</span> class</li>
+    <li><a href="../floss">floss.dart</a></li>
+    <li class="self-crumb">IudBase<span class="signature">&lt;<wbr><span class="type-parameter">M</span>&gt;</span> class</li>
   </ol>
   <div class="self-name">IudBase</div>
   <form class="search navbar-right" role="search">
@@ -49,22 +45,23 @@
   </div>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
     data-above-sidebar="floss&#47;floss-library-sidebar.html"
     data-below-sidebar="floss&#47;IudBase-class-sidebar.html">
     <div>
-<h1><span class="kind-class">IudBase&lt;<wbr><span class="type-parameter">M extends Model</span>&gt;</span> class 
+<h1><span class="kind-class">IudBase&lt;<wbr><span class="type-parameter">M</span>&gt;</span> class 
  
 </h1></div>
 
     
 <section class="desc markdown">
   <p>A base class for the Iud interface.</p>
-<p>It provides default implementations for the init, update, draw, and
-onExitRequested methods.</p>
+<p>It provides default implementations for the <a href="../floss/IudBase/init.html">init</a>, <a href="../floss/IudBase/update.html">update</a>, <a href="../floss/IudBase/draw.html">draw</a>,
+<a href="../floss/IudBase/dispose.html">dispose</a> and <a href="../floss/IudBase/onExitRequested.html">onExitRequested</a> methods. This class can be extended by
+subclasses to provide custom logic for these methods. The <code>M</code> type parameter
+is the type of the model that the Iud will work with.</p>
 </section>
 
 
@@ -82,7 +79,7 @@ onExitRequested methods.</p>
         
 
 
-
+        
         
 
 
@@ -92,7 +89,6 @@ onExitRequested methods.</p>
     
   <section class="summary offset-anchor" id="constructors">
     <h2>Constructors</h2>
-
     <dl class="constructor-summary-list">
         <dt id="IudBase" class="callable">
           <span class="name"><a href="../floss/IudBase/IudBase.html">IudBase</a></span><span class="signature">()</span>
@@ -134,14 +130,28 @@ onExitRequested methods.</p>
 
     </dl>
   </section>
+
     
   <section
       class="summary offset-anchor"
       id="instance-methods">
     <h2>Methods</h2>
     <dl class="callables">
+        <dt id="dispose" class="callable">
+  <span class="name"><a href="../floss/IudBase/dispose.html">dispose</a></span><span class="signature">(<wbr><span class="parameter" id="dispose-param-model"><span class="type-annotation">M</span> <span class="parameter-name">model</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Default implementation of the dispose method.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
         <dt id="draw" class="callable">
-  <span class="name"><a href="../floss/IudBase/draw.html">draw</a></span><span class="signature">(<wbr>{<span class="parameter" id="draw-param-model"><span>required</span> <span class="type-annotation">M</span> <span class="parameter-name">model</span>, </span><span class="parameter" id="draw-param-isLightTheme"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isLightTheme</span></span>})
+  <span class="name"><a href="../floss/IudBase/draw.html">draw</a></span><span class="signature">(<wbr>{<span class="parameter" id="draw-param-model"><span>required</span> <span class="type-annotation">M</span> <span class="parameter-name">model</span>, </span><span class="parameter" id="draw-param-lightThemeActive"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">lightThemeActive</span></span>})
     <span class="returntype parameter">&#8594; <a href="../floss/Drawing-class.html">Drawing</a></span>
   </span>
   
@@ -154,7 +164,7 @@ onExitRequested methods.</p>
 </dd>
 
         <dt id="init" class="callable">
-  <span class="name"><a href="../floss/IudBase/init.html">init</a></span><span class="signature">(<wbr>{<span class="parameter" id="init-param-modelCtor"><span>required</span> <span class="type-annotation"><a href="../floss/ModelCtor.html">ModelCtor</a><span class="signature">&lt;<wbr><span class="type-parameter">M</span>&gt;</span></span> <span class="parameter-name">modelCtor</span>, </span><span class="parameter" id="init-param-size"><span>required</span> <span class="type-annotation"><a href="../floss/Size-class.html">Size</a></span> <span class="parameter-name">size</span></span>})
+  <span class="name"><a href="../floss/IudBase/init.html">init</a></span><span class="signature">(<wbr>{<span class="parameter" id="init-param-modelCtor"><span>required</span> <span class="type-annotation"><a href="../floss/ModelCtor.html">ModelCtor</a><span class="signature">&lt;<wbr><span class="type-parameter">M</span>&gt;</span></span> <span class="parameter-name">modelCtor</span>, </span><span class="parameter" id="init-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="init-param-inputEvents"><span>required</span> <span class="type-annotation"><a href="../floss/InputEventList-class.html">InputEventList</a></span> <span class="parameter-name">inputEvents</span></span>})
     <span class="returntype parameter">&#8594; M</span>
   </span>
   
@@ -181,7 +191,7 @@ onExitRequested methods.</p>
 
         <dt id="onExitRequested" class="callable">
   <span class="name"><a href="../floss/IudBase/onExitRequested.html">onExitRequested</a></span><span class="signature">(<wbr>{<span class="parameter" id="onExitRequested-param-model"><span>required</span> <span class="type-annotation">M</span> <span class="parameter-name">model</span></span>})
-    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/AppExitResponse.html">AppExitResponse</a></span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/AppExitResponse.html">AppExitResponse</a></span>&gt;</span></span>
   </span>
   
 
@@ -206,7 +216,7 @@ onExitRequested methods.</p>
 </dd>
 
         <dt id="update" class="callable">
-  <span class="name"><a href="../floss/IudBase/update.html">update</a></span><span class="signature">(<wbr>{<span class="parameter" id="update-param-model"><span>required</span> <span class="type-annotation">M</span> <span class="parameter-name">model</span>, </span><span class="parameter" id="update-param-time"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Duration-class.html">Duration</a></span> <span class="parameter-name">time</span>, </span><span class="parameter" id="update-param-size"><span>required</span> <span class="type-annotation"><a href="../floss/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="update-param-inputEvents"><span>required</span> <span class="type-annotation"><a href="../floss/InputEventList-class.html">InputEventList</a></span> <span class="parameter-name">inputEvents</span></span>})
+  <span class="name"><a href="../floss/IudBase/update.html">update</a></span><span class="signature">(<wbr>{<span class="parameter" id="update-param-model"><span>required</span> <span class="type-annotation">M</span> <span class="parameter-name">model</span>, </span><span class="parameter" id="update-param-elapsed"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Duration-class.html">Duration</a></span> <span class="parameter-name">elapsed</span>, </span><span class="parameter" id="update-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="update-param-inputEvents"><span>required</span> <span class="type-annotation"><a href="../floss/InputEventList-class.html">InputEventList</a></span> <span class="parameter-name">inputEvents</span></span>})
     <span class="returntype parameter">&#8594; M</span>
   </span>
   
@@ -245,9 +255,7 @@ onExitRequested methods.</p>
     
     
 
-
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -255,40 +263,30 @@ onExitRequested methods.</p>
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">floss</a></li>
-    <li><a href="../floss/floss-library.html">floss</a></li>
-    <li class="self-crumb">IudBase<span class="signature">&lt;<wbr><span class="type-parameter">M extends <a href="../floss/Model-class.html">Model</a></span>&gt;</span> class</li>
+    <li><a href="../floss">floss</a></li>
+    <li class="self-crumb">IudBase<span class="signature">&lt;<wbr><span class="type-parameter">M</span>&gt;</span> class</li>
 </ol>
-
 
     <h5>floss library</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div>
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     floss
-      0.1.0
+      0.2.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../static-assets/highlight.pack.js?v1"></script>
 <script src="../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

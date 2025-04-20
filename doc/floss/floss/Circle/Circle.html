@@ -16,20 +16,16 @@
   <link rel="stylesheet" href="../../static-assets/github.css?v1">
   <link rel="stylesheet" href="../../static-assets/styles.css?v1">
   <link rel="icon" href="../../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">floss</a></li>
-    <li><a href="../../floss/floss-library.html">floss.dart</a></li>
+    <li><a href="../../floss">floss.dart</a></li>
     <li><a href="../../floss/Circle-class.html">Circle</a></li>
     <li class="self-crumb">Circle const constructor</li>
   </ol>
@@ -50,7 +46,6 @@
   </div>
 </header>
 <main>
-
   <div
       id="dartdoc-main-content"
       class="main-content"
@@ -62,15 +57,15 @@
 
     <section class="multi-line-signature">
       const
-      <span class="name ">Circle</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="-param-c"><span>required</span> <span class="type-annotation"><a href="../../floss/Offset-class.html">Offset</a></span> <span class="parameter-name">c</span>, </span></li>
+      <span class="name ">Circle</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="-param-center"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Offset-class.html">Offset</a></span> <span class="parameter-name">center</span>, </span></li>
 <li><span class="parameter" id="-param-radius"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">radius</span>, </span></li>
-<li><span class="parameter" id="-param-paint"><span>required</span> <span class="type-annotation"><a href="../../floss/Paint-class.html">Paint</a></span> <span class="parameter-name">paint</span>, </span></li>
+<li><span class="parameter" id="-param-paint"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/painting/Paint-class.html">Paint</a></span> <span class="parameter-name">paint</span>, </span></li>
 </ol>})
     </section>
-
     
 <section class="desc markdown">
-  <p>Creates a <a href="../../floss/Circle-class.html">Circle</a> defined by its center point <code>c</code>, <code>radius</code>, and <code>paint</code>.</p>
+  <p>Creates a <a href="../../floss/Circle-class.html">Circle</a> defined by its center point <code>center</code>, <code>radius</code>, and
+<code>paint</code>.</p>
 </section>
 
 
@@ -78,17 +73,16 @@
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">const Circle({
-  required g.Offset c,
+  required ui.Offset center,
   required double radius,
-  required pt.Paint paint,
-})  : _c = c,
-      _radius = radius,
-      _paint = paint;</code></pre>
+  required ui.Paint paint,
+}) : _center = center,
+     _radius = radius,
+     _paint = paint;</code></pre>
 </section>
 
 
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -96,41 +90,31 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">floss</a></li>
-    <li><a href="../../floss/floss-library.html">floss</a></li>
+    <li><a href="../../floss">floss</a></li>
     <li><a href="../../floss/Circle-class.html">Circle</a></li>
     <li class="self-crumb">Circle const constructor</li>
 </ol>
 
-
     <h5>Circle class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-left-->
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     floss
-      0.1.0
+      0.2.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../../static-assets/highlight.pack.js?v1"></script>
 <script src="../../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

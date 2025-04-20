@@ -16,21 +16,17 @@
   <link rel="stylesheet" href="../../static-assets/github.css?v1">
   <link rel="stylesheet" href="../../static-assets/styles.css?v1">
   <link rel="icon" href="../../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">floss</a></li>
-    <li><a href="../../floss/floss-library.html">floss.dart</a></li>
-    <li><a href="../../floss/IudBase-class.html">IudBase<span class="signature">&lt;<wbr><span class="type-parameter">M extends Model</span>&gt;</span></a></li>
+    <li><a href="../../floss">floss.dart</a></li>
+    <li><a href="../../floss/IudBase-class.html">IudBase<span class="signature">&lt;<wbr><span class="type-parameter">M</span>&gt;</span></a></li>
     <li class="self-crumb">init method</li>
   </ol>
   <div class="self-name">init</div>
@@ -50,7 +46,6 @@
   </div>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -67,10 +62,10 @@
         <li>@<a href="https://api.flutter.dev/flutter/dart-core/override-constant.html">override</a></li>
     </ol>
   </div>
-
 <span class="returntype">M</span>
 <span class="name ">init</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="init-param-modelCtor"><span>required</span> <span class="type-annotation"><a href="../../floss/ModelCtor.html">ModelCtor</a><span class="signature">&lt;<wbr><span class="type-parameter">M</span>&gt;</span></span> <span class="parameter-name">modelCtor</span>, </span></li>
-<li><span class="parameter" id="init-param-size"><span>required</span> <span class="type-annotation"><a href="../../floss/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span></li>
+<li><span class="parameter" id="init-param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span></li>
+<li><span class="parameter" id="init-param-inputEvents"><span>required</span> <span class="type-annotation"><a href="../../floss/InputEventList-class.html">InputEventList</a></span> <span class="parameter-name">inputEvents</span>, </span></li>
 </ol>})
 
       <div class="features"><span class="feature">override</span></div>
@@ -89,15 +84,15 @@
   <pre class="language-dart"><code class="language-dart">@override
 M init({
   required ModelCtor&lt;M&gt; modelCtor,
-  required g.Size size,
+  required ui.Size size,
+  required ie.InputEventList inputEvents,
 }) {
-  return modelCtor(size: size);
+  return modelCtor(size: size, inputEvents: inputEvents);
 }</code></pre>
 </section>
 
 
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -105,41 +100,31 @@ M init({
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">floss</a></li>
-    <li><a href="../../floss/floss-library.html">floss</a></li>
-    <li><a href="../../floss/IudBase-class.html">IudBase<span class="signature">&lt;<wbr><span class="type-parameter">M extends Model</span>&gt;</span></a></li>
+    <li><a href="../../floss">floss</a></li>
+    <li><a href="../../floss/IudBase-class.html">IudBase<span class="signature">&lt;<wbr><span class="type-parameter">M</span>&gt;</span></a></li>
     <li class="self-crumb">init method</li>
 </ol>
-
 
     <h5>IudBase class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-->
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
 </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     floss
-      0.1.0
+      0.2.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../../static-assets/highlight.pack.js?v1"></script>
 <script src="../../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

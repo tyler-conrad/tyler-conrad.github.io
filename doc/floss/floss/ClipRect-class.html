@@ -16,20 +16,16 @@
   <link rel="stylesheet" href="../static-assets/github.css?v1">
   <link rel="stylesheet" href="../static-assets/styles.css?v1">
   <link rel="icon" href="../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">floss</a></li>
-    <li><a href="../floss/floss-library.html">floss.dart</a></li>
+    <li><a href="../floss">floss.dart</a></li>
     <li class="self-crumb">ClipRect class</li>
   </ol>
   <div class="self-name">ClipRect</div>
@@ -49,7 +45,6 @@
   </div>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -62,8 +57,7 @@
 
     
 <section class="desc markdown">
-  <p>A drawing operation that clips the drawing operations that compose the class
-by a rectangle.</p>
+  <p>Clips the drawing operations that compose the class with a rectangle.</p>
 </section>
 
 
@@ -84,7 +78,7 @@ by a rectangle.</p>
         
 
 
-
+        
         
 
 
@@ -94,10 +88,9 @@ by a rectangle.</p>
     
   <section class="summary offset-anchor" id="constructors">
     <h2>Constructors</h2>
-
     <dl class="constructor-summary-list">
         <dt id="ClipRect" class="callable">
-          <span class="name"><a href="../floss/ClipRect/ClipRect.html">ClipRect</a></span><span class="signature">({<span class="parameter" id="-param-canvasOps"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../floss/CanvasOp-class.html">CanvasOp</a></span>&gt;</span></span> <span class="parameter-name">canvasOps</span>, </span><span class="parameter" id="-param-rect"><span>required</span> <span class="type-annotation"><a href="../floss/Rect-class.html">Rect</a></span> <span class="parameter-name">rect</span>, </span><span class="parameter" id="-param-clipOp"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/ClipOp.html">ClipOp</a></span> <span class="parameter-name">clipOp</span> = <span class="default-value">ui.ClipOp.intersect</span>, </span><span class="parameter" id="-param-doAntiAlias"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">doAntiAlias</span> = <span class="default-value">true</span></span>})</span>
+          <span class="name"><a href="../floss/ClipRect/ClipRect.html">ClipRect</a></span><span class="signature">({<span class="parameter" id="-param-rect"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Rect-class.html">Rect</a></span> <span class="parameter-name">rect</span>, </span><span class="parameter" id="-param-clipOp"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/ClipOp.html">ClipOp</a></span> <span class="parameter-name">clipOp</span> = <span class="default-value">ui.ClipOp.intersect</span>, </span><span class="parameter" id="-param-doAntiAlias"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">doAntiAlias</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-ops"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../floss/CanvasOp-class.html">CanvasOp</a></span>&gt;</span></span> <span class="parameter-name">ops</span></span>})</span>
         </dt>
         <dd>
           Creates a new <a href="../floss/ClipRect-class.html">ClipRect</a> instance with the specified <code>rect</code>, <code>clipOp</code>, and
@@ -124,6 +117,18 @@ optionally whether to use anti-aliasing.
 
 </dd>
 
+        <dt id="ops" class="property inherited">
+  <span class="name"><a href="../floss/Drawing/ops.html">ops</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../floss/CanvasOp-class.html">CanvasOp</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
         <dt id="runtimeType" class="property inherited">
   <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
   <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span>
@@ -138,6 +143,7 @@ optionally whether to use anti-aliasing.
 
     </dl>
   </section>
+
     
   <section
       class="summary offset-anchor inherited"
@@ -145,7 +151,7 @@ optionally whether to use anti-aliasing.
     <h2>Methods</h2>
     <dl class="callables">
         <dt id="draw" class="callable inherited">
-  <span class="name"><a href="../floss/Drawing/draw.html">draw</a></span><span class="signature">(<wbr>{<span class="parameter" id="draw-param-canvas"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Canvas-class.html">Canvas</a></span> <span class="parameter-name">canvas</span></span>})
+  <span class="name"><a href="../floss/Drawing/draw.html">draw</a></span><span class="signature">(<wbr>{<span class="parameter" id="draw-param-canvas"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/painting/Canvas-class.html">Canvas</a></span> <span class="parameter-name">canvas</span></span>})
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../floss/PictureType-class.html">PictureType</a></span>&gt;</span></span>
   </span>
   
@@ -223,9 +229,7 @@ optionally whether to use anti-aliasing.
     
     
 
-
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -233,40 +237,30 @@ optionally whether to use anti-aliasing.
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">floss</a></li>
-    <li><a href="../floss/floss-library.html">floss</a></li>
+    <li><a href="../floss">floss</a></li>
     <li class="self-crumb">ClipRect class</li>
 </ol>
-
 
     <h5>floss library</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div>
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     floss
-      0.1.0
+      0.2.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../static-assets/highlight.pack.js?v1"></script>
 <script src="../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

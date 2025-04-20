@@ -16,20 +16,16 @@
   <link rel="stylesheet" href="../../static-assets/github.css?v1">
   <link rel="stylesheet" href="../../static-assets/styles.css?v1">
   <link rel="icon" href="../../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">floss</a></li>
-    <li><a href="../../floss/floss-library.html">floss.dart</a></li>
+    <li><a href="../../floss">floss.dart</a></li>
     <li><a href="../../floss/Iud-class.html">Iud<span class="signature">&lt;<wbr><span class="type-parameter">M</span>&gt;</span></a></li>
     <li class="self-crumb">draw abstract method</li>
   </ol>
@@ -50,7 +46,6 @@
   </div>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -62,10 +57,9 @@
 
     <section class="multi-line-signature">
       
-
 <span class="returntype"><a href="../../floss/Drawing-class.html">Drawing</a></span>
 <span class="name ">draw</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="draw-param-model"><span>required</span> <span class="type-annotation">M</span> <span class="parameter-name">model</span>, </span></li>
-<li><span class="parameter" id="draw-param-isLightTheme"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isLightTheme</span>, </span></li>
+<li><span class="parameter" id="draw-param-lightThemeActive"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">lightThemeActive</span>, </span></li>
 </ol>})
 
       
@@ -74,7 +68,10 @@
     
 <section class="desc markdown">
   <p>Draws the model on the canvas.</p>
-<p>The <code>isLightTheme</code> parameter is meant to allow changing the returned
+<p>This method returns a <a href="../../floss/Drawing-class.html">co.Drawing</a> which is a tree of <a href="../../floss/CanvasOp-class.html">co.CanvasOp</a>
+drawing operations. This tree is walked each from applying the composite
+and leaf node drawing operations to compose the contents of the canvas.The
+<code>lightThemeActive</code> parameter is meant to allow changing the returned
 drawing based on the current theme of the application.</p>
 </section>
 
@@ -82,15 +79,11 @@ drawing based on the current theme of the application.</p>
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">co.Drawing draw({
-  required M model,
-  required bool isLightTheme,
-});</code></pre>
+  <pre class="language-dart"><code class="language-dart">co.Drawing draw({required M model, required bool lightThemeActive});</code></pre>
 </section>
 
 
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -98,41 +91,31 @@ drawing based on the current theme of the application.</p>
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">floss</a></li>
-    <li><a href="../../floss/floss-library.html">floss</a></li>
+    <li><a href="../../floss">floss</a></li>
     <li><a href="../../floss/Iud-class.html">Iud<span class="signature">&lt;<wbr><span class="type-parameter">M</span>&gt;</span></a></li>
     <li class="self-crumb">draw abstract method</li>
 </ol>
 
-
     <h5>Iud class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-->
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
 </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     floss
-      0.1.0
+      0.2.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../../static-assets/highlight.pack.js?v1"></script>
 <script src="../../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

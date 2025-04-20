@@ -16,15 +16,11 @@
   <link rel="stylesheet" href="static-assets/github.css?v1">
   <link rel="stylesheet" href="static-assets/styles.css?v1">
   <link rel="icon" href="static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
@@ -47,159 +43,226 @@
   </div>
 </header>
 <main>
-
   <div id="dartdoc-main-content" class="main-content">
       
 <section class="desc markdown">
-  <h1 id="floss">floss</h1>
-<h2 id="overview">Overview</h2>
-<p>Floss is a vector graphics abstraction library designed for Flutter
-applications. It facilitates data-driven processing of input events and employs
-a tree data structure for rendering graphics. The library draws inspiration from
-the Haskell-based <a href="https://github.com/benl23x5/gloss">gloss</a> library.</p>
-<p><img src="example.gif" alt=""></p>
+  <h1 id="floss">Floss</h1>
+<p><strong>Floss</strong> is a declarative vector graphics abstraction library for Flutter,
+inspired by the <a href="https://github.com/benl23x5/gloss">Gloss</a> library in Haskell.
+It provides a composable, tree-structured DSL for describing 2D graphics using
+<code>CustomPainter</code>, built around immutable data structures and functional-style
+state management.</p>
+<hr>
 <h2 id="features">Features</h2>
-<ol>
-<li><code>FlossWidget</code>:</li>
-</ol>
 <ul>
-<li>The primary entry point for using the floss library is the <code>FlossWidget</code>. This
-widget integrates seamlessly into the Flutter widget tree and is typically
-instantiated within the build method of a Flutter Widget.</li>
-<li>The <code>FlossWidget</code> requires a <code>FocusNode</code> and a <code>Config</code> object. The
-<code>FocusNode</code> is used to capture keyboard events, while the <code>Config</code> object
-contains the configuration for the application, including the model
-constructor and the <code>Iud</code> interface.</li>
+<li><strong>Declarative graphics tree</strong> using <code>Drawing</code> and <code>CanvasOp</code> nodes</li>
+<li><strong>Data-driven input handling</strong> with an extensible <code>InputEvent</code> model</li>
+<li><strong>Composable canvas operations</strong>: transform, clip, paint, shape primitives,
+images, paragraphs, shadows, etc.</li>
+<li><strong>Reactive input</strong> integrated with Flutter’s gesture and pointer systems</li>
+<li><strong>Optional non-clearing canvas</strong> mode to enable "ghosting"/feedback effects</li>
+<li><strong>Frame-by-frame update loop</strong> driven by a <code>Ticker</code></li>
+<li><strong>Minimal interface (<code>Iud</code>)</strong> for state, updates, and rendering logic</li>
 </ul>
-<ol start="2">
-<li><code>Iud</code> Interface:</li>
-</ol>
+<hr>
+<h2 id="architecture">Architecture</h2>
+<pre class="language-text"><code class="language-text">            ┌──────────────┐
+            │ FlossWidget  │ &lt;─── Flutter widget tree
+            └─────┬────────┘
+                  │
+     ┌────────────┴────────────┐
+     │       Config&lt;M&gt;         │
+     └────────┬──────┬─────────┘
+              │      │
+              ▼      |
+        ModelCtor&lt;M&gt; │
+                     │
+              ┌──────┴─────┐
+              │   Iud&lt;M&gt;   │ &lt;── App logic: init, update, draw
+              └────┬───────┘
+                   ▼
+          ┌──────────────────┐
+          │   Drawing Tree   │ &lt;─── CanvasOp nodes (e.g., Rect, Translate, Paint)
+          └──────────────────┘
+</code></pre>
+<hr>
+<h2 id="core-concepts">Core Concepts</h2>
+<h3 id="drawing-tree"><code>Drawing</code> Tree</h3>
 <ul>
-<li>The <code>Iud</code> interface is a minimalistic interface that provides methods for
-initializing, updating, and drawing the model. It acts as the bridge between
-the application state and the rendering logic.</li>
-<li>The init method initializes the model, the update method updates the model
-based on input events and elapsed time, and the draw method generates the
-Drawing tree data structure.</li>
+<li>A <code>Drawing</code> is a recursive tree of canvas operations (<code>CanvasOp</code>)</li>
+<li>Composite operations like <code>Translate</code>, <code>Rotate</code>, <code>ClipRect</code>, etc. apply
+transformations to nested children</li>
+<li>Leaf operations like <code>Rect</code>, <code>Line</code>, <code>Image</code>, etc. perform direct drawing on
+the canvas</li>
 </ul>
-<ol start="3">
-<li><code>Drawing</code> Tree:</li>
-</ol>
+<h3 id="iudm"><code>Iud&lt;M&gt;</code></h3>
+<p>Your application logic lives in an implementation of the <code>Iud&lt;M&gt;</code> interface:</p>
 <ul>
-<li>The <code>Drawing</code> tree is a tree data structure composed of <code>Drawing</code> nodes. Each
-node represents a graphical element, such as shapes or composite operations
-like translations, rotations, and scaling.</li>
-<li>This tree structure allows for efficient and flexible rendering of complex
-graphics by breaking them down into manageable components.</li>
+<li><code>init</code> — creates your model</li>
+<li><code>update</code> — updates your model with time and input</li>
+<li><code>draw</code> — builds a <code>Drawing</code> tree from your model</li>
+<li><code>dispose</code> / <code>onExitRequested</code> — lifecycle hooks</li>
 </ul>
-<h2 id="getting-started">Getting started</h2>
-<ol>
-<li>Define the <code>Model</code> and <code>Iud</code>:</li>
-</ol>
-<ul>
-<li>Create a model class that represents the state of your application.</li>
-<li>Implement the Iud interface for your model. This involves defining the init,
-update, and draw methods.</li>
-</ul>
-<ol start="2">
-<li>Configure the <code>FlossWidget</code>:</li>
-</ol>
-<ul>
-<li>Instantiate a <code>FlossWidget</code> in your widget's build method.</li>
-<li>Pass a FocusNode and a Config object to the <code>FlossWidget</code>. The <code>Config object</code>
-should specify the model constructor and the <code>Iud</code> implementation and the
-<code>ClearCanvasType</code>.</li>
-</ul>
-<ol start="3">
-<li>Handle Input Events:</li>
-</ol>
-<ul>
-<li>The <code>FlossWidget</code> listens for various input events, such as long presses and
-gestures, and adds them to an <code>InputEventList</code>.</li>
-<li>These events are processed by the <code>Iud</code> implementation to update the model
-accordingly.</li>
-</ul>
-<ol start="4">
-<li>Render the <code>Drawing</code> Tree:</li>
-</ol>
-<ul>
-<li>The <code>FlossWidget</code> uses a custom painter (<code>_FlossPainter</code>) to render the
-<code>Drawing</code> tree on a canvas.</li>
-<li>The painter updates the model based on the elapsed time and input events, and
-then draws the updated <code>Drawing</code> tree.</li>
-</ul>
-<h3 id="example">Example</h3>
-<pre class="language-dart"><code class="language-dart">import 'package:flutter/widgets.dart';
-import 'package:floss/floss.dart';
+<p><code>M</code> is parametrically polymorphic, the only requirement is that it can be
+constructed using the <code>ModelCtor&lt;M&gt;</code> function:</p>
+<pre class="language-dart"><code class="language-dart">import 'package:floss/floss.dart' as floss;
 
+typedef ModelCtor&lt;M&gt; =
+    M Function({
+      required ui.Size size,
+      required floss.InputEventList inputEvents
+  });
+</code></pre>
+<hr>
+<h2 id="example">Example</h2>
+<pre class="language-dart"><code class="language-dart">import 'dart:ui' as ui;
+
+import 'package:flutter/material.dart' as m;
+import 'package:floss/floss.dart' as f;
+
+// Model with arbitrary state
 class MyModel {
-  // Define your model properties here
+  final ui.Offset position;
+  final ui.Size size;
+  final f.InputEventList inputEvents;
+  // Only requirement is that there is a `Function` that takes a `ui.Size` and
+  // a `f.InputEventList` and returns a model object.
+  MyModel({required this.size, required this.inputEvents})
+    : position = ui.Offset(size.width / 2, size.height / 2);
+
+  // Named constructor to allow for immutable state updates
+  MyModel.update({
+    required this.size,
+    required this.inputEvents,
+    required this.position,
+  });
 }
 
-class MyIud implements Iud&lt;MyModel&gt; {
-  @override
-  MyModel init({
-    required ModelCtor&lt;MyModel&gt; modelCtor,
-    required Size size,
-  }) {
-    // Initialize the model
-    return modelCtor();
-  }
+// IUD (Input Update Draw) class
+class MyIud extends f.IudBase&lt;MyModel&gt; {
+  // `init()` is inherited from `IudBase` and is called when the model is created.
 
+  // This is where the model is updated based on input events
   @override
   MyModel update({
     required MyModel model,
-    required Duration time,
-    required InputEventList inputEvents,
+    required Duration elapsed,
+    required ui.Size size,
+    required f.InputEventList inputEvents,
   }) {
-    // Update the model based on input events and elapsed time
-    return model;
+    for (final event in inputEvents) {
+      switch (event) {
+        // update `position` based on mouse events
+        case f.PointerMove(:final event):
+          return MyModel.update(
+            size: size,
+            inputEvents: inputEvents,
+            position: event.localPosition,
+          );
+        default:
+          break;
+      }
+    }
+    // If no mouse events, return the model unchanged
+    return MyModel.update(
+      size: size,
+      inputEvents: inputEvents,
+      position: model.position,
+    );
   }
 
+  // This is where the drawing tree is created based on the model
   @override
-  Drawing draw({required MyModel model, required Size size}) {
-    // Generate the Drawing tree based on the model
-    return Drawing(canvas_ops: [
-        // Add CanvasOp or Drawing nodes here
-    ]);
-  }
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return FlossWidget(
-      focusNode: FocusNode(),
-      config: Config(
-        modelCtor: () =&gt; MyModel(),
-        iud: MyIud(),
-        clearCanvas: const f.ClearCanvas(),
-      ),
+  f.Drawing draw({required MyModel model, required bool lightThemeActive}) {
+    // `f.Drawing` is just a container for other `CanvasOp`s
+    return f.Drawing(
+      ops: [
+        // `Circle` leaf node that draws a circle at the model's position
+        f.Circle(
+          center: model.position,
+          radius: 20,
+          paint: ui.Paint()..color = m.Colors.white,
+        ),
+      ],
     );
   }
 }
 
 void main() {
-  runApp(MyApp());
+  m.runApp(
+    m.MaterialApp(
+      color: m.Colors.white,
+      title: 'Floss Example',
+      builder: (context, child) {
+        return f.FlossWidget(
+          focusNode: m.FocusNode(),
+          config: f.Config(
+            modelCtor: MyModel.new,
+            iud: MyIud(),
+            clearCanvas: const f.ClearCanvas(),
+          ),
+        );
+      },
+    ),
+  );
 }
-
 </code></pre>
-<h2 id="usage">Usage</h2>
-<p>The <code>example/gallery</code> directory contains a sample Flutter application that
-demonstrates the usage of the Floss library. The application displays a gallery
-of interactive graphics that can be manipulated using various pointer events.
-The gallery includes examples of basic shapes, transformations, and animations.</p>
-<h2 id="tested-on">Tested on</h2>
-<p><strong>Platform:</strong></p>
+<hr>
+<h2 id="included-modules">Included Modules</h2>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>canvas_ops.dart</code></td>
+<td>Core canvas primitives and <code>Drawing</code> structure</td>
+</tr>
+<tr>
+<td><code>floss_widget.dart</code></td>
+<td>Flutter widget integrating the rendering loop</td>
+</tr>
+<tr>
+<td><code>input_event.dart</code></td>
+<td>Input abstraction layer over Flutter gestures</td>
+</tr>
+<tr>
+<td><code>config.dart</code></td>
+<td>Configuration container for model/Iud/canvas behavior</td>
+</tr>
+<tr>
+<td><code>miud.dart</code></td>
+<td>Iud interface and base classes for model logic</td>
+</tr>
+<tr>
+<td><code>utils.dart</code></td>
+<td>Vector math utilities (<code>Offset.norm()</code>, <code>.clampLen()</code>)</td>
+</tr>
+<tr>
+<td><code>logger.dart</code></td>
+<td>Optional logger abstraction based on <code>package:logger</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="status">Status</h2>
+<p>Floss is a <strong>work-in-progress</strong> library for experimental canvas-heavy or
+simulation-based UI in Flutter. It is designed to enable rich, purely
+declarative drawing via trees of composable operations and model-driven
+input-handling.</p>
+<hr>
+<h2 id="license">License</h2>
+<p>MIT © 2025 — Contributions welcome!</p>
+<h2 id="tested-on">Tested On</h2>
 <ul>
-<li>macOS Sonoma 14.6.1</li>
-</ul>
-<p><strong>Flutter:</strong></p>
-<ul>
-<li>Flutter 3.24.0 • channel stable • <a href="https://github.com/flutter/flutter.git">https://github.com/flutter/flutter.git</a></li>
-<li>Framework • revision 80c2e84975 (2 weeks ago) • 2024-07-30 23:06:49 +0700</li>
-<li>Engine • revision b8800d88be</li>
-<li>Tools • Dart 3.5.0 • DevTools 2.37.2</li>
+<li>macOS 15.4.1</li>
+<li>Flutter 3.29.3 • channel stable • <a href="https://github.com/flutter/flutter.git">https://github.com/flutter/flutter.git</a></li>
+<li>Framework • revision ea121f8859 (8 days ago) • 2025-04-11 19:10:07 +0000</li>
+<li>Engine • revision cf56914b32</li>
+<li>Tools • Dart 3.7.2 • DevTools 2.42.3</li>
 </ul>
 </section>
 
@@ -208,7 +271,7 @@ The gallery includes examples of basic shapes, transformations, and animations.<
           <h2>Libraries</h2>
         <dl>
           <dt id="floss">
-  <span class="name"><a href="floss/floss-library.html">floss</a></span> 
+  <span class="name"><a href="floss">floss</a></span> 
 
 </dt>
 <dd>Floss is a vector graphics abstraction library for Flutter.
@@ -216,9 +279,7 @@ The gallery includes examples of basic shapes, transformations, and animations.<
 
         </dl>
       </section>
-
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -226,42 +287,32 @@ The gallery includes examples of basic shapes, transformations, and animations.<
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="https://github.com/tyler-conrad/floss">floss package</a></li>
 </ol>
 
-
     <h5 class="hidden-xs"><span class="package-name">floss</span> <span class="package-kind">package</span></h5>
     <ol>
       <li class="section-title">Libraries</li>
-      <li><a href="floss/floss-library.html">floss</a></li>
+      <li><a href="floss">floss</a></li>
 </ol>
 
   </div>
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div>
-
 </main>
-
 <footer>
   <span class="no-break">
     floss
-      0.1.0
+      0.2.0
   </span>
-
   
 </footer>
-
 
 
 <script src="static-assets/highlight.pack.js?v1"></script>
 <script src="static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

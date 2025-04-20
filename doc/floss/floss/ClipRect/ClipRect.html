@@ -16,20 +16,16 @@
   <link rel="stylesheet" href="../../static-assets/github.css?v1">
   <link rel="stylesheet" href="../../static-assets/styles.css?v1">
   <link rel="icon" href="../../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">floss</a></li>
-    <li><a href="../../floss/floss-library.html">floss.dart</a></li>
+    <li><a href="../../floss">floss.dart</a></li>
     <li><a href="../../floss/ClipRect-class.html">ClipRect</a></li>
     <li class="self-crumb">ClipRect const constructor</li>
   </ol>
@@ -50,7 +46,6 @@
   </div>
 </header>
 <main>
-
   <div
       id="dartdoc-main-content"
       class="main-content"
@@ -62,13 +57,12 @@
 
     <section class="multi-line-signature">
       const
-      <span class="name ">ClipRect</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="-param-canvasOps"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../floss/CanvasOp-class.html">CanvasOp</a></span>&gt;</span></span> <span class="parameter-name">canvasOps</span>, </span></li>
-<li><span class="parameter" id="-param-rect"><span>required</span> <span class="type-annotation"><a href="../../floss/Rect-class.html">Rect</a></span> <span class="parameter-name">rect</span>, </span></li>
+      <span class="name ">ClipRect</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="-param-rect"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Rect-class.html">Rect</a></span> <span class="parameter-name">rect</span>, </span></li>
 <li><span class="parameter" id="-param-clipOp"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/ClipOp.html">ClipOp</a></span> <span class="parameter-name">clipOp</span> = <span class="default-value">ui.ClipOp.intersect</span>, </span></li>
 <li><span class="parameter" id="-param-doAntiAlias"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">doAntiAlias</span> = <span class="default-value">true</span>, </span></li>
+<li><span class="parameter" id="-param-ops"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../floss/CanvasOp-class.html">CanvasOp</a></span>&gt;</span></span> <span class="parameter-name">ops</span>, </span></li>
 </ol>})
     </section>
-
     
 <section class="desc markdown">
   <p>Creates a new <a href="../../floss/ClipRect-class.html">ClipRect</a> instance with the specified <code>rect</code>, <code>clipOp</code>, and
@@ -80,18 +74,17 @@ optionally whether to use anti-aliasing.</p>
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">const ClipRect({
-  required super.canvasOps,
-  required g.Rect rect,
+  required ui.Rect rect,
   ui.ClipOp clipOp = ui.ClipOp.intersect,
   bool doAntiAlias = true,
-})  : _rect = rect,
-      _clipOp = clipOp,
-      _doAntiAlias = doAntiAlias;</code></pre>
+  required super.ops,
+}) : _rect = rect,
+     _clipOp = clipOp,
+     _doAntiAlias = doAntiAlias;</code></pre>
 </section>
 
 
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -99,41 +92,31 @@ optionally whether to use anti-aliasing.</p>
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">floss</a></li>
-    <li><a href="../../floss/floss-library.html">floss</a></li>
+    <li><a href="../../floss">floss</a></li>
     <li><a href="../../floss/ClipRect-class.html">ClipRect</a></li>
     <li class="self-crumb">ClipRect const constructor</li>
 </ol>
 
-
     <h5>ClipRect class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-left-->
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     floss
-      0.1.0
+      0.2.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../../static-assets/highlight.pack.js?v1"></script>
 <script src="../../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

@@ -16,20 +16,16 @@
   <link rel="stylesheet" href="../../static-assets/github.css?v1">
   <link rel="stylesheet" href="../../static-assets/styles.css?v1">
   <link rel="icon" href="../../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">floss</a></li>
-    <li><a href="../../floss/floss-library.html">floss.dart</a></li>
+    <li><a href="../../floss">floss.dart</a></li>
     <li><a href="../../floss/Atlas-class.html">Atlas</a></li>
     <li class="self-crumb">Atlas const constructor</li>
   </ol>
@@ -50,7 +46,6 @@
   </div>
 </header>
 <main>
-
   <div
       id="dartdoc-main-content"
       class="main-content"
@@ -64,14 +59,13 @@
       const
       <span class="name ">Atlas</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="-param-image"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Image-class.html">Image</a></span> <span class="parameter-name">image</span>, </span></li>
 <li><span class="parameter" id="-param-transforms"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/RSTransform-class.html">RSTransform</a></span>&gt;</span></span> <span class="parameter-name">transforms</span>, </span></li>
-<li><span class="parameter" id="-param-rects"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../floss/Rect-class.html">Rect</a></span>&gt;</span></span> <span class="parameter-name">rects</span>, </span></li>
-<li><span class="parameter" id="-param-colors"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Color-class.html">Color</a></span>&gt;</span>?</span> <span class="parameter-name">colors</span>, </span></li>
-<li><span class="parameter" id="-param-blendMode"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/BlendMode.html">BlendMode</a>?</span> <span class="parameter-name">blendMode</span>, </span></li>
-<li><span class="parameter" id="-param-cullRect"><span class="type-annotation"><a href="../../floss/Rect-class.html">Rect</a>?</span> <span class="parameter-name">cullRect</span>, </span></li>
-<li><span class="parameter" id="-param-paint"><span>required</span> <span class="type-annotation"><a href="../../floss/Paint-class.html">Paint</a></span> <span class="parameter-name">paint</span>, </span></li>
+<li><span class="parameter" id="-param-rects"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-ui/Rect-class.html">Rect</a></span>&gt;</span></span> <span class="parameter-name">rects</span>, </span></li>
+<li><span class="parameter" id="-param-colors"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/painting/Color-class.html">Color</a></span>&gt;</span>?</span> <span class="parameter-name">colors</span>, </span></li>
+<li><span class="parameter" id="-param-blendMode"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/painting/BlendMode.html">BlendMode</a>?</span> <span class="parameter-name">blendMode</span>, </span></li>
+<li><span class="parameter" id="-param-cullRect"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Rect-class.html">Rect</a>?</span> <span class="parameter-name">cullRect</span>, </span></li>
+<li><span class="parameter" id="-param-paint"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/painting/Paint-class.html">Paint</a></span> <span class="parameter-name">paint</span>, </span></li>
 </ol>})
     </section>
-
     
 <section class="desc markdown">
   <p>Creates a new <code>Atlas</code> instance.</p>
@@ -97,23 +91,22 @@ rendering the corresponding rect.</p>
   <pre class="language-dart"><code class="language-dart">const Atlas({
   required ui.Image image,
   required List&lt;ui.RSTransform&gt; transforms,
-  required List&lt;g.Rect&gt; rects,
+  required List&lt;ui.Rect&gt; rects,
   List&lt;ui.Color&gt;? colors,
   ui.BlendMode? blendMode,
-  g.Rect? cullRect,
-  required pt.Paint paint,
-})  : _image = image,
-      _transforms = transforms,
-      _rects = rects,
-      _colors = colors,
-      _blendMode = blendMode,
-      _cullRect = cullRect,
-      _paint = paint;</code></pre>
+  ui.Rect? cullRect,
+  required ui.Paint paint,
+}) : _image = image,
+     _transforms = transforms,
+     _rects = rects,
+     _colors = colors,
+     _blendMode = blendMode,
+     _cullRect = cullRect,
+     _paint = paint;</code></pre>
 </section>
 
 
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -121,41 +114,31 @@ rendering the corresponding rect.</p>
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">floss</a></li>
-    <li><a href="../../floss/floss-library.html">floss</a></li>
+    <li><a href="../../floss">floss</a></li>
     <li><a href="../../floss/Atlas-class.html">Atlas</a></li>
     <li class="self-crumb">Atlas const constructor</li>
 </ol>
 
-
     <h5>Atlas class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-left-->
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     floss
-      0.1.0
+      0.2.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../../static-assets/highlight.pack.js?v1"></script>
 <script src="../../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

@@ -16,20 +16,16 @@
   <link rel="stylesheet" href="../static-assets/github.css?v1">
   <link rel="stylesheet" href="../static-assets/styles.css?v1">
   <link rel="icon" href="../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">floss</a></li>
-    <li><a href="../floss/floss-library.html">floss.dart</a></li>
+    <li><a href="../floss">floss.dart</a></li>
     <li class="self-crumb">Drawing class</li>
   </ol>
   <div class="self-name">Drawing</div>
@@ -49,7 +45,6 @@
   </div>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -62,8 +57,9 @@
 
     
 <section class="desc markdown">
-  <p>A sealed class for composite canvas drawing operations. Meant to be use for
-operations that should be applied to all <a href="../floss/CanvasOp-class.html">CanvasOp</a>s composing the drawing.</p>
+  <p>A sealed class for composite canvas drawing operations. Meant to be used for
+operations that should be applied to all <a href="../floss/CanvasOp-class.html">CanvasOp</a>s composing this drawing
+type.</p>
 </section>
 
 
@@ -106,7 +102,7 @@ operations that should be applied to all <a href="../floss/CanvasOp-class.html">
               <li><a href="../floss/Translate-class.html">Translate</a></li>
           </ul></dd>
 
-
+        
         
 
 
@@ -116,20 +112,19 @@ operations that should be applied to all <a href="../floss/CanvasOp-class.html">
     
   <section class="summary offset-anchor" id="constructors">
     <h2>Constructors</h2>
-
     <dl class="constructor-summary-list">
         <dt id="Drawing" class="callable">
-          <span class="name"><a href="../floss/Drawing/Drawing.html">Drawing</a></span><span class="signature">({<span class="parameter" id="-param-canvasOps"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../floss/CanvasOp-class.html">CanvasOp</a></span>&gt;</span></span> <span class="parameter-name">canvasOps</span></span>})</span>
+          <span class="name"><a href="../floss/Drawing/Drawing.html">Drawing</a></span><span class="signature">({<span class="parameter" id="-param-ops"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../floss/CanvasOp-class.html">CanvasOp</a></span>&gt;</span></span> <span class="parameter-name">ops</span></span>})</span>
         </dt>
         <dd>
-          Creates a new <a href="../floss/Drawing-class.html">Drawing</a> instance with the specified <code>canvasOps</code>.
+          Creates a new <a href="../floss/Drawing-class.html">Drawing</a> instance with the specified <code>ops</code>.
             <div class="constructor-modifier features">const</div>
         </dd>
     </dl>
   </section>
     
   <section
-      class="summary offset-anchor inherited"
+      class="summary offset-anchor"
       id="instance-properties">
     <h2>Properties</h2>
     <dl class="properties">
@@ -142,6 +137,18 @@ operations that should be applied to all <a href="../floss/CanvasOp-class.html">
 <dd class="inherited">
   The hash code for this object.
   <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="ops" class="property">
+  <span class="name"><a href="../floss/Drawing/ops.html">ops</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../floss/CanvasOp-class.html">CanvasOp</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">final</span></div>
 
 </dd>
 
@@ -159,6 +166,7 @@ operations that should be applied to all <a href="../floss/CanvasOp-class.html">
 
     </dl>
   </section>
+
     
   <section
       class="summary offset-anchor"
@@ -166,7 +174,7 @@ operations that should be applied to all <a href="../floss/CanvasOp-class.html">
     <h2>Methods</h2>
     <dl class="callables">
         <dt id="draw" class="callable">
-  <span class="name"><a href="../floss/Drawing/draw.html">draw</a></span><span class="signature">(<wbr>{<span class="parameter" id="draw-param-canvas"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Canvas-class.html">Canvas</a></span> <span class="parameter-name">canvas</span></span>})
+  <span class="name"><a href="../floss/Drawing/draw.html">draw</a></span><span class="signature">(<wbr>{<span class="parameter" id="draw-param-canvas"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/painting/Canvas-class.html">Canvas</a></span> <span class="parameter-name">canvas</span></span>})
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../floss/PictureType-class.html">PictureType</a></span>&gt;</span></span>
   </span>
   
@@ -244,9 +252,7 @@ operations that should be applied to all <a href="../floss/CanvasOp-class.html">
     
     
 
-
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -254,40 +260,30 @@ operations that should be applied to all <a href="../floss/CanvasOp-class.html">
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">floss</a></li>
-    <li><a href="../floss/floss-library.html">floss</a></li>
+    <li><a href="../floss">floss</a></li>
     <li class="self-crumb">Drawing class</li>
 </ol>
-
 
     <h5>floss library</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div>
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     floss
-      0.1.0
+      0.2.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../static-assets/highlight.pack.js?v1"></script>
 <script src="../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

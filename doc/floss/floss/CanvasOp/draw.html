@@ -16,20 +16,16 @@
   <link rel="stylesheet" href="../../static-assets/github.css?v1">
   <link rel="stylesheet" href="../../static-assets/styles.css?v1">
   <link rel="icon" href="../../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">floss</a></li>
-    <li><a href="../../floss/floss-library.html">floss.dart</a></li>
+    <li><a href="../../floss">floss.dart</a></li>
     <li><a href="../../floss/CanvasOp-class.html">CanvasOp</a></li>
     <li class="self-crumb">draw method</li>
   </ol>
@@ -50,7 +46,6 @@
   </div>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -67,9 +62,8 @@
         <li>@<a href="https://api.flutter.dev/flutter/dart-core/override-constant.html">override</a></li>
     </ol>
   </div>
-
 <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../floss/PictureType-class.html">PictureType</a></span>&gt;</span></span>
-<span class="name ">draw</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="draw-param-canvas"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Canvas-class.html">Canvas</a></span> <span class="parameter-name">canvas</span>, </span></li>
+<span class="name ">draw</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="draw-param-canvas"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/painting/Canvas-class.html">Canvas</a></span> <span class="parameter-name">canvas</span>, </span></li>
 </ol>})
 
       <div class="features"><span class="feature">override</span></div>
@@ -87,247 +81,114 @@
   <pre class="language-dart"><code class="language-dart">@override
 Iterable&lt;PictureType&gt; draw({required ui.Canvas canvas}) {
   switch (this) {
-    case _Transform(
-        :final _matrix4,
-      ):
-      canvas.transform(
-        td.Float64List.fromList(
-          _matrix4.storage,
-        ),
-      );
+    case _Transform(:final _matrix4):
+      canvas.transform(_matrix4);
 
-    case Picture(
-        :final _picture,
-      ):
-      canvas.drawPicture(
-        _picture,
-      );
+    case Picture(:final _picture):
+      canvas.drawPicture(_picture);
 
     case Arc(
-        :final _rect,
-        :final _startAngle,
-        :final _sweepAngle,
-        :final _useCenter,
-        :final _paint,
-      ):
-      canvas.drawArc(
-        _rect.rect,
-        _startAngle,
-        _sweepAngle,
-        _useCenter,
-        _paint.paint,
-      );
+      :final _rect,
+      :final _startAngle,
+      :final _sweepAngle,
+      :final _useCenter,
+      :final _paint,
+    ):
+      canvas.drawArc(_rect, _startAngle, _sweepAngle, _useCenter, _paint);
 
     case Atlas(
-        :final _image,
-        :final _transforms,
-        :final _rects,
-        :final _colors,
-        :final _blendMode,
-        :final _cullRect,
-        :final _paint,
-      ):
+      :final _image,
+      :final _transforms,
+      :final _rects,
+      :final _colors,
+      :final _blendMode,
+      :final _cullRect,
+      :final _paint,
+    ):
       canvas.drawAtlas(
         _image,
         _transforms,
-        _rects.map((r) =&gt; r.rect).toList(),
+        _rects,
         _colors,
         _blendMode,
-        _cullRect?.rect,
-        _paint.paint,
+        _cullRect,
+        _paint,
       );
 
-    case Circle(
-        :final _c,
-        :final _radius,
-        :final _paint,
-      ):
-      canvas.drawCircle(
-        _c.offset,
-        _radius,
-        _paint.paint,
-      );
+    case Circle(_center: final c, :final _radius, :final _paint):
+      canvas.drawCircle(c, _radius, _paint);
 
-    case Color(
-        :final _color,
-        :final _blendMode,
-      ):
-      canvas.drawColor(
-        _color,
-        _blendMode,
-      );
+    case Color(:final _color, :final _blendMode):
+      canvas.drawColor(_color, _blendMode);
 
-    case DRRect(
-        :final _outer,
-        :final _inner,
-        :final _paint,
-      ):
-      canvas.drawDRRect(
-        _outer.rrect,
-        _inner.rrect,
-        _paint.paint,
-      );
+    case DRRect(:final _outer, :final _inner, :final _paint):
+      canvas.drawDRRect(_outer, _inner, _paint);
 
-    case Image(
-        :final _image,
-        :final _offset,
-        :final _paint,
-      ):
-      canvas.drawImage(
-        _image,
-        _offset.offset,
-        _paint.paint,
-      );
+    case Image(:final _image, :final _offset, :final _paint):
+      canvas.drawImage(_image, _offset, _paint);
 
-    case ImageNine(
-        :final _image,
-        :final _center,
-        :final _dst,
-        :final _paint,
-      ):
-      canvas.drawImageNine(
-        _image,
-        _center.rect,
-        _dst.rect,
-        _paint.paint,
-      );
+    case ImageNine(:final _image, :final _center, :final _dst, :final _paint):
+      canvas.drawImageNine(_image, _center, _dst, _paint);
 
-    case ImageRect(
-        :final _image,
-        :final _src,
-        :final _dst,
-        :final _paint,
-      ):
-      canvas.drawImageRect(
-        _image,
-        _src.rect,
-        _dst.rect,
-        _paint.paint,
-      );
+    case ImageRect(:final _image, :final _src, :final _dst, :final _paint):
+      canvas.drawImageRect(_image, _src, _dst, _paint);
 
-    case Line(
-        :final _p1,
-        :final _p2,
-        :final _paint,
-      ):
-      canvas.drawLine(
-        _p1.offset,
-        _p2.offset,
-        _paint.paint,
-      );
+    case Line(:final _p1, :final _p2, :final _paint):
+      canvas.drawLine(_p1, _p2, _paint);
 
-    case Oval(
-        :final _rect,
-        :final _paint,
-      ):
-      canvas.drawOval(
-        _rect.rect,
-        _paint.paint,
-      );
+    case Oval(:final _rect, :final _paint):
+      canvas.drawOval(_rect, _paint);
 
-    case PaintFill(:final _paint):
-      canvas.drawPaint(_paint.paint);
+    case Fill(:final _paint):
+      canvas.drawPaint(_paint);
 
-    case Paragraph(
-        :final _paragraph,
-        :final _offset,
-      ):
-      canvas.drawParagraph(
-        _paragraph,
-        _offset.offset,
-      );
+    case Paragraph(:final _paragraph, :final _offset):
+      canvas.drawParagraph(_paragraph, _offset);
 
-    case PathBuilder(
-        :final _path,
-        :final _paint,
-      ):
-      canvas.drawPath(
-        _path,
-        _paint.paint,
-      );
+    case Path(:final _path, :final _paint):
+      canvas.drawPath(_path, _paint);
 
-    case Points(
-        :final _pointMode,
-        :final _points,
-        :final _paint,
-      ):
-      canvas.drawPoints(
-        _pointMode,
-        _points.map((v) =&gt; g.Offset.fromVec(v).offset).toList(),
-        _paint.paint,
-      );
+    case Points(:final _pointMode, :final _points, :final _paint):
+      canvas.drawPoints(_pointMode, _points, _paint);
 
     case RawAtlas(
-        :final _atlas,
-        :final _rstTransforms,
-        :final _rects,
-        :final _colors,
-        :final _blendMode,
-        :final _cullRect,
-        :final _paint,
-      ):
+      :final _atlas,
+      :final _rstTransforms,
+      :final _rects,
+      :final _colors,
+      :final _blendMode,
+      :final _cullRect,
+      :final _paint,
+    ):
       canvas.drawRawAtlas(
         _atlas,
         _rstTransforms,
         _rects,
         _colors,
         _blendMode,
-        _cullRect?.rect,
-        _paint.paint,
+        _cullRect,
+        _paint,
       );
 
-    case RawPoints(
-        :final _pointMode,
-        :final _points,
-        :final _paint,
-      ):
-      canvas.drawRawPoints(
-        _pointMode,
-        _points,
-        _paint.paint,
-      );
+    case RawPoints(:final _pointMode, :final _points, :final _paint):
+      canvas.drawRawPoints(_pointMode, _points, _paint);
 
-    case Rectangle(
-        :final _rect,
-        :final _paint,
-      ):
-      canvas.drawRect(
-        _rect.rect,
-        _paint.paint,
-      );
+    case Rect(:final _rect, :final _paint):
+      canvas.drawRect(_rect, _paint);
 
-    case RRectangle(
-        :final _rrect,
-        :final _paint,
-      ):
-      canvas.drawRRect(
-        _rrect.rrect,
-        _paint.paint,
-      );
+    case RRect(:final _rrect, :final _paint):
+      canvas.drawRRect(_rrect, _paint);
 
     case Shadow(
-        :final _path,
-        :final _color,
-        :final _elevation,
-        :final _transparentOccluder,
-      ):
-      canvas.drawShadow(
-        _path,
-        _color,
-        _elevation,
-        _transparentOccluder,
-      );
+      :final _path,
+      :final _color,
+      :final _elevation,
+      :final _transparentOccluder,
+    ):
+      canvas.drawShadow(_path, _color, _elevation, _transparentOccluder);
 
-    case Vertices(
-        :final _verts,
-        :final _blendMode,
-        :final _paint,
-      ):
-      canvas.drawVertices(
-        _verts,
-        _blendMode,
-        _paint.paint,
-      );
+    case Vertices(:final _verts, :final _blendMode, :final _paint):
+      canvas.drawVertices(_verts, _blendMode, _paint);
 
     case Drawing():
       return draw(canvas: canvas);
@@ -338,7 +199,6 @@ Iterable&lt;PictureType&gt; draw({required ui.Canvas canvas}) {
 
 
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -346,41 +206,31 @@ Iterable&lt;PictureType&gt; draw({required ui.Canvas canvas}) {
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">floss</a></li>
-    <li><a href="../../floss/floss-library.html">floss</a></li>
+    <li><a href="../../floss">floss</a></li>
     <li><a href="../../floss/CanvasOp-class.html">CanvasOp</a></li>
     <li class="self-crumb">draw method</li>
 </ol>
 
-
     <h5>CanvasOp class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-->
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
 </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     floss
-      0.1.0
+      0.2.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../../static-assets/highlight.pack.js?v1"></script>
 <script src="../../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

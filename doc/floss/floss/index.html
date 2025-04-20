@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="floss library API docs, for the Dart programming language.">
+  <title>floss library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">floss</a></li>
+    <li class="self-crumb">floss.dart</li>
+  </ol>
+  <div class="self-name">floss</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar=""
+    data-below-sidebar="floss&#47;floss-library-sidebar.html">
+  
+    <div>
+      
+
+      <h1>
+        <span class="kind-library">floss</span>
+        library 
+ 
+
+      </h1>
+    </div>
+
+    
+<section class="desc markdown">
+  <p>Floss is a vector graphics abstraction library for Flutter.</p>
+<p>It allows for data driven processing of input events and a tree data
+structure for rendering. It draws inspiration from the
+<a href="https://github.com/benl23x5/gloss">gloss</a> library for Haskell. Typical use
+of the library involves creating a <code>FlossWidget</code> as part of the build method
+of a <code>Widget</code>.</p>
+<p>The <code>FlossWidget</code> uses the <code>Iud</code> interface to manage the application state
+and rendering. This class is a minimal interface that provides methods for
+initializing the model, updating the model, and drawing the model. The model
+is used to draw the <code>Drawing</code> tree data structure on the canvas. The
+<code>Drawing</code> tree data structure is composed of <code>CanvasOps</code> nodes that
+represent the different types of shapes and composite operations like
+translations, rotations, and scaling.</p>
+</section>
+
+
+    <section class="summary offset-anchor" id="classes">
+      <h2>Classes</h2>
+      <dl>
+          <dt id="Arc">
+  <span class="name "><a href="../floss/Arc-class.html">Arc</a></span> 
+
+</dt>
+<dd>
+  A canvas operation for drawing an arc.
+</dd>
+
+          <dt id="Atlas">
+  <span class="name "><a href="../floss/Atlas-class.html">Atlas</a></span> 
+
+</dt>
+<dd>
+  An atlas for rendering images on a canvas.
+</dd>
+
+          <dt id="BackgroundPicture">
+  <span class="name "><a href="../floss/BackgroundPicture-class.html">BackgroundPicture</a></span> 
+
+</dt>
+<dd>
+  A drawing operation that draws a background picture on the canvas. Used for
+the <code>NoClearCanvas</code> configuration.
+</dd>
+
+          <dt id="BackgroundPictureType">
+  <span class="name "><a href="../floss/BackgroundPictureType-class.html">BackgroundPictureType</a></span> 
+
+</dt>
+<dd>
+  A background picture type.
+</dd>
+
+          <dt id="CanvasOp">
+  <span class="name "><a href="../floss/CanvasOp-class.html">CanvasOp</a></span> 
+
+</dt>
+<dd>
+  A sealed class for performing various canvas operations.
+</dd>
+
+          <dt id="CanvasPictureType">
+  <span class="name "><a href="../floss/CanvasPictureType-class.html">CanvasPictureType</a></span> 
+
+</dt>
+<dd>
+  A picture type that uses a <a href="https://api.flutter.dev/flutter/dart-ui/Picture-class.html">ui.Picture</a> object.
+</dd>
+
+          <dt id="Circle">
+  <span class="name "><a href="../floss/Circle-class.html">Circle</a></span> 
+
+</dt>
+<dd>
+  A canvas operation for drawing a circle.
+</dd>
+
+          <dt id="ClearCanvas">
+  <span class="name "><a href="../floss/ClearCanvas-class.html">ClearCanvas</a></span> 
+
+</dt>
+<dd>
+  Represents a clear canvas configuration.
+</dd>
+
+          <dt id="ClearCanvasType">
+  <span class="name "><a href="../floss/ClearCanvasType-class.html">ClearCanvasType</a></span> 
+
+</dt>
+<dd>
+  Represents a sealed class for clearing the canvas.
+</dd>
+
+          <dt id="ClipPath">
+  <span class="name "><a href="../floss/ClipPath-class.html">ClipPath</a></span> 
+
+</dt>
+<dd>
+  Clips the drawing operations that compose the class with a path.
+</dd>
+
+          <dt id="ClipRect">
+  <span class="name "><a href="../floss/ClipRect-class.html">ClipRect</a></span> 
+
+</dt>
+<dd>
+  Clips the drawing operations that compose the class with a rectangle.
+</dd>
+
+          <dt id="ClipRRect">
+  <span class="name "><a href="../floss/ClipRRect-class.html">ClipRRect</a></span> 
+
+</dt>
+<dd>
+  Clips the drawing operations that compose the class with a rounded
+rectangle.
+</dd>
+
+          <dt id="Color">
+  <span class="name "><a href="../floss/Color-class.html">Color</a></span> 
+
+</dt>
+<dd>
+  A color and blend mode to be applied to the entire canvas.
+</dd>
+
+          <dt id="Config">
+  <span class="name "><a href="../floss/Config-class.html">Config</a><span class="signature">&lt;<wbr><span class="type-parameter">M</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  Represents a <code>FlossWidget</code> configuration for a specific model type.
+</dd>
+
+          <dt id="DoubleTap">
+  <span class="name "><a href="../floss/DoubleTap-class.html">DoubleTap</a></span> 
+
+</dt>
+<dd>
+  Represents a double tap event.
+</dd>
+
+          <dt id="DoubleTapCancel">
+  <span class="name "><a href="../floss/DoubleTapCancel-class.html">DoubleTapCancel</a></span> 
+
+</dt>
+<dd>
+  Represents a double tap cancel event.
+</dd>
+
+          <dt id="DoubleTapDown">
+  <span class="name "><a href="../floss/DoubleTapDown-class.html">DoubleTapDown</a></span> 
+
+</dt>
+<dd>
+  Represents a double tap down event.
+</dd>
+
+          <dt id="Drawing">
+  <span class="name "><a href="../floss/Drawing-class.html">Drawing</a></span> 
+
+</dt>
+<dd>
+  A sealed class for composite canvas drawing operations. Meant to be used for
+operations that should be applied to all <a href="../floss/CanvasOp-class.html">CanvasOp</a>s composing this drawing
+type.
+</dd>
+
+          <dt id="DRRect">
+  <span class="name "><a href="../floss/DRRect-class.html">DRRect</a></span> 
+
+</dt>
+<dd>
+  A canvas operation for drawing the difference between two rounded
+rectangles.
+</dd>
+
+          <dt id="Fill">
+  <span class="name "><a href="../floss/Fill-class.html">Fill</a></span> 
+
+</dt>
+<dd>
+  A canvas operation for filling the canvas with a paint object.
+</dd>
+
+          <dt id="FlossWidget">
+  <span class="name "><a href="../floss/FlossWidget-class.html">FlossWidget</a></span> 
+
+</dt>
+<dd>
+  A widget that provides a canvas for drawing.
+</dd>
+
+          <dt id="ForcePressEnd">
+  <span class="name "><a href="../floss/ForcePressEnd-class.html">ForcePressEnd</a></span> 
+
+</dt>
+<dd>
+  Represents a force press end event.
+</dd>
+
+          <dt id="ForcePressPeak">
+  <span class="name "><a href="../floss/ForcePressPeak-class.html">ForcePressPeak</a></span> 
+
+</dt>
+<dd>
+  Represents a force press peak event.
+</dd>
+
+          <dt id="ForcePressStart">
+  <span class="name "><a href="../floss/ForcePressStart-class.html">ForcePressStart</a></span> 
+
+</dt>
+<dd>
+  Represents a force press start event.
+</dd>
+
+          <dt id="ForcePressUpdate">
+  <span class="name "><a href="../floss/ForcePressUpdate-class.html">ForcePressUpdate</a></span> 
+
+</dt>
+<dd>
+  Represents a force press update event.
+</dd>
+
+          <dt id="ICanvasOp">
+  <span class="name "><a href="../floss/ICanvasOp-class.html">ICanvasOp</a></span> 
+
+</dt>
+<dd>
+  A interface for canvas operations.
+</dd>
+
+          <dt id="Image">
+  <span class="name "><a href="../floss/Image-class.html">Image</a></span> 
+
+</dt>
+<dd>
+  A canvas operation for drawing an image.
+</dd>
+
+          <dt id="ImageNine">
+  <span class="name "><a href="../floss/ImageNine-class.html">ImageNine</a></span> 
+
+</dt>
+<dd>
+  A canvas operation for drawing a nine-patch image.
+</dd>
+
+          <dt id="ImageRect">
+  <span class="name "><a href="../floss/ImageRect-class.html">ImageRect</a></span> 
+
+</dt>
+<dd>
+  A canvas operation for drawing an rectangular section of an image to the
+canvas.
+</dd>
+
+          <dt id="InputEvent">
+  <span class="name "><a href="../floss/InputEvent-class.html">InputEvent</a></span> 
+
+</dt>
+<dd>
+  Represents an input event.
+</dd>
+
+          <dt id="InputEventList">
+  <span class="name "><a href="../floss/InputEventList-class.html">InputEventList</a></span> 
+
+</dt>
+<dd>
+  Represents a list of input events.
+</dd>
+
+          <dt id="Iud">
+  <span class="name "><a href="../floss/Iud-class.html">Iud</a><span class="signature">&lt;<wbr><span class="type-parameter">M</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  An interface for the <a href="../floss/Iud/init.html">init</a>, <a href="../floss/Iud/update.html">update</a>, <a href="../floss/Iud/draw.html">draw</a>, <a href="../floss/Iud/dispose.html">dispose</a> and
+<a href="../floss/Iud/onExitRequested.html">onExitRequested</a> methods.
+</dd>
+
+          <dt id="IudBase">
+  <span class="name "><a href="../floss/IudBase-class.html">IudBase</a><span class="signature">&lt;<wbr><span class="type-parameter">M</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  A base class for the Iud interface.
+</dd>
+
+          <dt id="KeyEvent">
+  <span class="name "><a href="../floss/KeyEvent-class.html">KeyEvent</a></span> 
+
+</dt>
+<dd>
+  Represents a key event.
+</dd>
+
+          <dt id="Line">
+  <span class="name "><a href="../floss/Line-class.html">Line</a></span> 
+
+</dt>
+<dd>
+  A canvas operation for drawing a line.
+</dd>
+
+          <dt id="LongPress">
+  <span class="name "><a href="../floss/LongPress-class.html">LongPress</a></span> 
+
+</dt>
+<dd>
+  Represents a long press event.
+</dd>
+
+          <dt id="LongPressCancel">
+  <span class="name "><a href="../floss/LongPressCancel-class.html">LongPressCancel</a></span> 
+
+</dt>
+<dd>
+  Represents a long press cancel event.
+</dd>
+
+          <dt id="LongPressDown">
+  <span class="name "><a href="../floss/LongPressDown-class.html">LongPressDown</a></span> 
+
+</dt>
+<dd>
+  Represents a long press down event.
+</dd>
+
+          <dt id="LongPressEnd">
+  <span class="name "><a href="../floss/LongPressEnd-class.html">LongPressEnd</a></span> 
+
+</dt>
+<dd>
+  Represents a long press end event.
+</dd>
+
+          <dt id="LongPressMoveUpdate">
+  <span class="name "><a href="../floss/LongPressMoveUpdate-class.html">LongPressMoveUpdate</a></span> 
+
+</dt>
+<dd>
+  Represents a long press move update event.
+</dd>
+
+          <dt id="LongPressStart">
+  <span class="name "><a href="../floss/LongPressStart-class.html">LongPressStart</a></span> 
+
+</dt>
+<dd>
+  Represents a long press start event.
+</dd>
+
+          <dt id="LongPressUp">
+  <span class="name "><a href="../floss/LongPressUp-class.html">LongPressUp</a></span> 
+
+</dt>
+<dd>
+  Represents a long press up event.
+</dd>
+
+          <dt id="Model">
+  <span class="name "><a href="../floss/Model-class.html">Model</a></span> 
+
+</dt>
+<dd>
+  A minimal model class.
+</dd>
+
+          <dt id="MouseEnter">
+  <span class="name "><a href="../floss/MouseEnter-class.html">MouseEnter</a></span> 
+
+</dt>
+<dd>
+  Represents an input event when a pointer enters a target.
+</dd>
+
+          <dt id="MouseExit">
+  <span class="name "><a href="../floss/MouseExit-class.html">MouseExit</a></span> 
+
+</dt>
+<dd>
+  Represents an input event when a pointer exits a target.
+</dd>
+
+          <dt id="MouseHover">
+  <span class="name "><a href="../floss/MouseHover-class.html">MouseHover</a></span> 
+
+</dt>
+<dd>
+  Represents an input event when a pointer hovers over a target.
+</dd>
+
+          <dt id="NoClearCanvas">
+  <span class="name "><a href="../floss/NoClearCanvas-class.html">NoClearCanvas</a></span> 
+
+</dt>
+<dd>
+  Represents a type of canvas that does not clear itself before drawing.
+</dd>
+
+          <dt id="Noop">
+  <span class="name "><a href="../floss/Noop-class.html">Noop</a></span> 
+
+</dt>
+<dd>
+  A drawing operation that does nothing. Useful in scenarios where a branch
+decides which of two drawings to use and one of the branches should do
+nothing.
+</dd>
+
+          <dt id="Oval">
+  <span class="name "><a href="../floss/Oval-class.html">Oval</a></span> 
+
+</dt>
+<dd>
+  A canvas operation for drawing an oval.
+</dd>
+
+          <dt id="Paragraph">
+  <span class="name "><a href="../floss/Paragraph-class.html">Paragraph</a></span> 
+
+</dt>
+<dd>
+  A canvas operation for drawing a paragraph of text.
+</dd>
+
+          <dt id="Path">
+  <span class="name "><a href="../floss/Path-class.html">Path</a></span> 
+
+</dt>
+<dd>
+  A canvas operation for building a path.
+</dd>
+
+          <dt id="Picture">
+  <span class="name "><a href="../floss/Picture-class.html">Picture</a></span> 
+
+</dt>
+<dd>
+  Represents the operation of drawing a <a href="https://api.flutter.dev/flutter/dart-ui/Picture-class.html">ui.Picture</a> on a canvas.
+</dd>
+
+          <dt id="PictureType">
+  <span class="name "><a href="../floss/PictureType-class.html">PictureType</a></span> 
+
+</dt>
+<dd>
+  A sealed class for picture types.
+</dd>
+
+          <dt id="PointerCancel">
+  <span class="name "><a href="../floss/PointerCancel-class.html">PointerCancel</a></span> 
+
+</dt>
+<dd>
+  Represents a pointer cancel event.
+</dd>
+
+          <dt id="PointerDown">
+  <span class="name "><a href="../floss/PointerDown-class.html">PointerDown</a></span> 
+
+</dt>
+<dd>
+  Represents a pointer down event.
+</dd>
+
+          <dt id="PointerHover">
+  <span class="name "><a href="../floss/PointerHover-class.html">PointerHover</a></span> 
+
+</dt>
+<dd>
+  Represents a pointer hover event.
+</dd>
+
+          <dt id="PointerMove">
+  <span class="name "><a href="../floss/PointerMove-class.html">PointerMove</a></span> 
+
+</dt>
+<dd>
+  Represents a pointer move event.
+</dd>
+
+          <dt id="PointerPanZoomEnd">
+  <span class="name "><a href="../floss/PointerPanZoomEnd-class.html">PointerPanZoomEnd</a></span> 
+
+</dt>
+<dd>
+  Represents a pointer pan zoom end event.
+</dd>
+
+          <dt id="PointerPanZoomStart">
+  <span class="name "><a href="../floss/PointerPanZoomStart-class.html">PointerPanZoomStart</a></span> 
+
+</dt>
+<dd>
+  Represents a pointer pan zoom start event.
+</dd>
+
+          <dt id="PointerPanZoomUpdate">
+  <span class="name "><a href="../floss/PointerPanZoomUpdate-class.html">PointerPanZoomUpdate</a></span> 
+
+</dt>
+<dd>
+  Represents a pointer pan zoom update event.
+</dd>
+
+          <dt id="PointerSignal">
+  <span class="name "><a href="../floss/PointerSignal-class.html">PointerSignal</a></span> 
+
+</dt>
+<dd>
+  Represents a pointer signal event.
+</dd>
+
+          <dt id="PointerUp">
+  <span class="name "><a href="../floss/PointerUp-class.html">PointerUp</a></span> 
+
+</dt>
+<dd>
+  Represents a pointer up event.
+</dd>
+
+          <dt id="Points">
+  <span class="name "><a href="../floss/Points-class.html">Points</a></span> 
+
+</dt>
+<dd>
+  A canvas operation for drawing points.
+</dd>
+
+          <dt id="RawAtlas">
+  <span class="name "><a href="../floss/RawAtlas-class.html">RawAtlas</a></span> 
+
+</dt>
+<dd>
+  A canvas operation for drawing sections of an image atlas to
+the canvas with different transformations.
+</dd>
+
+          <dt id="RawPoints">
+  <span class="name "><a href="../floss/RawPoints-class.html">RawPoints</a></span> 
+
+</dt>
+<dd>
+  A canvas operation for drawing points.
+</dd>
+
+          <dt id="Rect">
+  <span class="name "><a href="../floss/Rect-class.html">Rect</a></span> 
+
+</dt>
+<dd>
+  A canvas operation for drawing a rectangle.
+</dd>
+
+          <dt id="Restore">
+  <span class="name "><a href="../floss/Restore-class.html">Restore</a></span> 
+
+</dt>
+<dd>
+  A drawing operation that restores the last saved state of the canvas.
+</dd>
+
+          <dt id="RestoreToCount">
+  <span class="name "><a href="../floss/RestoreToCount-class.html">RestoreToCount</a></span> 
+
+</dt>
+<dd>
+  A drawing operation that restores the canvas to a specific state in the
+stack.
+</dd>
+
+          <dt id="Rotate">
+  <span class="name "><a href="../floss/Rotate-class.html">Rotate</a></span> 
+
+</dt>
+<dd>
+  A drawing operation that applies a rotation to the canvas.
+</dd>
+
+          <dt id="RRect">
+  <span class="name "><a href="../floss/RRect-class.html">RRect</a></span> 
+
+</dt>
+<dd>
+  A canvas operation for drawing a rounded rectangle.
+</dd>
+
+          <dt id="Save">
+  <span class="name "><a href="../floss/Save-class.html">Save</a></span> 
+
+</dt>
+<dd>
+  A drawing operation that saves the current state of the canvas.
+</dd>
+
+          <dt id="SaveLayer">
+  <span class="name "><a href="../floss/SaveLayer-class.html">SaveLayer</a></span> 
+
+</dt>
+<dd>
+  A drawing operation that saves the current state of the canvas and applies a
+new transformation state to the stack.
+</dd>
+
+          <dt id="Scale">
+  <span class="name "><a href="../floss/Scale-class.html">Scale</a></span> 
+
+</dt>
+<dd>
+  A drawing operation that applies a scale to the canvas.
+</dd>
+
+          <dt id="ScaleEnd">
+  <span class="name "><a href="../floss/ScaleEnd-class.html">ScaleEnd</a></span> 
+
+</dt>
+<dd>
+  Represents a scale end event.
+</dd>
+
+          <dt id="ScaleStart">
+  <span class="name "><a href="../floss/ScaleStart-class.html">ScaleStart</a></span> 
+
+</dt>
+<dd>
+  Represents a scale start event.
+</dd>
+
+          <dt id="ScaleUpdate">
+  <span class="name "><a href="../floss/ScaleUpdate-class.html">ScaleUpdate</a></span> 
+
+</dt>
+<dd>
+  Represents a scale update event.
+</dd>
+
+          <dt id="SecondaryLongPress">
+  <span class="name "><a href="../floss/SecondaryLongPress-class.html">SecondaryLongPress</a></span> 
+
+</dt>
+<dd>
+  Represents a secondary long press event.
+</dd>
+
+          <dt id="SecondaryLongPressCancel">
+  <span class="name "><a href="../floss/SecondaryLongPressCancel-class.html">SecondaryLongPressCancel</a></span> 
+
+</dt>
+<dd>
+  Represents a secondary long press cancel event.
+</dd>
+
+          <dt id="SecondaryLongPressDown">
+  <span class="name "><a href="../floss/SecondaryLongPressDown-class.html">SecondaryLongPressDown</a></span> 
+
+</dt>
+<dd>
+  Represents a secondary long press down event.
+</dd>
+
+          <dt id="SecondaryLongPressEnd">
+  <span class="name "><a href="../floss/SecondaryLongPressEnd-class.html">SecondaryLongPressEnd</a></span> 
+
+</dt>
+<dd>
+  Represents a secondary long press end event.
+</dd>
+
+          <dt id="SecondaryLongPressMoveUpdate">
+  <span class="name "><a href="../floss/SecondaryLongPressMoveUpdate-class.html">SecondaryLongPressMoveUpdate</a></span> 
+
+</dt>
+<dd>
+  Represents a secondary long press move update event.
+</dd>
+
+          <dt id="SecondaryLongPressStart">
+  <span class="name "><a href="../floss/SecondaryLongPressStart-class.html">SecondaryLongPressStart</a></span> 
+
+</dt>
+<dd>
+  Represents a secondary long press start event.
+</dd>
+
+          <dt id="SecondaryLongPressUp">
+  <span class="name "><a href="../floss/SecondaryLongPressUp-class.html">SecondaryLongPressUp</a></span> 
+
+</dt>
+<dd>
+  Represents a secondary long press up event.
+</dd>
+
+          <dt id="SecondaryTap">
+  <span class="name "><a href="../floss/SecondaryTap-class.html">SecondaryTap</a></span> 
+
+</dt>
+<dd>
+  Represents a secondary tap event.
+</dd>
+
+          <dt id="SecondaryTapCancel">
+  <span class="name "><a href="../floss/SecondaryTapCancel-class.html">SecondaryTapCancel</a></span> 
+
+</dt>
+<dd>
+  Represents a secondary tap cancel event.
+</dd>
+
+          <dt id="SecondaryTapDown">
+  <span class="name "><a href="../floss/SecondaryTapDown-class.html">SecondaryTapDown</a></span> 
+
+</dt>
+<dd>
+  Represents a secondary tap down event.
+</dd>
+
+          <dt id="SecondaryTapUp">
+  <span class="name "><a href="../floss/SecondaryTapUp-class.html">SecondaryTapUp</a></span> 
+
+</dt>
+<dd>
+  Represents a secondary tap up event.
+</dd>
+
+          <dt id="Shadow">
+  <span class="name "><a href="../floss/Shadow-class.html">Shadow</a></span> 
+
+</dt>
+<dd>
+  A canvas operation for drawing a shadow.
+</dd>
+
+          <dt id="Skew">
+  <span class="name "><a href="../floss/Skew-class.html">Skew</a></span> 
+
+</dt>
+<dd>
+  A drawing operation that applies a skew to the canvas.
+</dd>
+
+          <dt id="Tap">
+  <span class="name "><a href="../floss/Tap-class.html">Tap</a></span> 
+
+</dt>
+<dd>
+  Represents a tap event.
+</dd>
+
+          <dt id="TapCancel">
+  <span class="name "><a href="../floss/TapCancel-class.html">TapCancel</a></span> 
+
+</dt>
+<dd>
+  Represents a tap cancel event.
+</dd>
+
+          <dt id="TapDown">
+  <span class="name "><a href="../floss/TapDown-class.html">TapDown</a></span> 
+
+</dt>
+<dd>
+  Represents a tap down event.
+</dd>
+
+          <dt id="TapUp">
+  <span class="name "><a href="../floss/TapUp-class.html">TapUp</a></span> 
+
+</dt>
+<dd>
+  Represents a tap up event.
+</dd>
+
+          <dt id="TertiaryLongPress">
+  <span class="name "><a href="../floss/TertiaryLongPress-class.html">TertiaryLongPress</a></span> 
+
+</dt>
+<dd>
+  Represents a tertiary long press event.
+</dd>
+
+          <dt id="TertiaryLongPressCancel">
+  <span class="name "><a href="../floss/TertiaryLongPressCancel-class.html">TertiaryLongPressCancel</a></span> 
+
+</dt>
+<dd>
+  Represents a tertiary long press cancel event.
+</dd>
+
+          <dt id="TertiaryLongPressDown">
+  <span class="name "><a href="../floss/TertiaryLongPressDown-class.html">TertiaryLongPressDown</a></span> 
+
+</dt>
+<dd>
+  Represents a tertiary long press down event.
+</dd>
+
+          <dt id="TertiaryLongPressEnd">
+  <span class="name "><a href="../floss/TertiaryLongPressEnd-class.html">TertiaryLongPressEnd</a></span> 
+
+</dt>
+<dd>
+  Represents a tertiary long press end event.
+</dd>
+
+          <dt id="TertiaryLongPressMoveUpdate">
+  <span class="name "><a href="../floss/TertiaryLongPressMoveUpdate-class.html">TertiaryLongPressMoveUpdate</a></span> 
+
+</dt>
+<dd>
+  Represents a tertiary long press move update event.
+</dd>
+
+          <dt id="TertiaryLongPressStart">
+  <span class="name "><a href="../floss/TertiaryLongPressStart-class.html">TertiaryLongPressStart</a></span> 
+
+</dt>
+<dd>
+  Represents a tertiary long press start event.
+</dd>
+
+          <dt id="TertiaryLongPressUp">
+  <span class="name "><a href="../floss/TertiaryLongPressUp-class.html">TertiaryLongPressUp</a></span> 
+
+</dt>
+<dd>
+  Represents a tertiary long press up event.
+</dd>
+
+          <dt id="TertiaryTapCancel">
+  <span class="name "><a href="../floss/TertiaryTapCancel-class.html">TertiaryTapCancel</a></span> 
+
+</dt>
+<dd>
+  Represents a tertiary tap cancel event.
+</dd>
+
+          <dt id="TertiaryTapDown">
+  <span class="name "><a href="../floss/TertiaryTapDown-class.html">TertiaryTapDown</a></span> 
+
+</dt>
+<dd>
+  Represents a tertiary tap down event.
+</dd>
+
+          <dt id="TertiaryTapUp">
+  <span class="name "><a href="../floss/TertiaryTapUp-class.html">TertiaryTapUp</a></span> 
+
+</dt>
+<dd>
+  Represents a tertiary tap up event.
+</dd>
+
+          <dt id="Transform">
+  <span class="name "><a href="../floss/Transform-class.html">Transform</a></span> 
+
+</dt>
+<dd>
+  A drawing operation that applies a matrix transformation to the canvas.
+</dd>
+
+          <dt id="Translate">
+  <span class="name "><a href="../floss/Translate-class.html">Translate</a></span> 
+
+</dt>
+<dd>
+  A drawing operation that applies a translation to the canvas.
+</dd>
+
+          <dt id="Vertices">
+  <span class="name "><a href="../floss/Vertices-class.html">Vertices</a></span> 
+
+</dt>
+<dd>
+  A canvas operation for drawing vertices.
+</dd>
+
+      </dl>
+    </section>
+
+
+
+
+    <section class="summary offset-anchor" id="extensions">
+      <h2>Extensions</h2>
+      <dl>
+          <dt id="OffsetClamp">
+  <span class="name "><a href="../floss/OffsetClamp.html">OffsetClamp</a></span>
+  on <a href="https://api.flutter.dev/flutter/dart-ui/Offset-class.html">Offset</a>
+  
+
+</dt>
+<dd>
+  
+</dd>
+
+          <dt id="OffsetNormalize">
+  <span class="name "><a href="../floss/OffsetNormalize.html">OffsetNormalize</a></span>
+  on <a href="https://api.flutter.dev/flutter/dart-ui/Offset-class.html">Offset</a>
+  
+
+</dt>
+<dd>
+  
+</dd>
+
+      </dl>
+    </section>
+
+
+    <section class="summary offset-anchor" id="properties">
+      <h2>Properties</h2>
+      <dl class="properties">
+          <dt id="l" class="property">
+  <span class="name"><a href="../floss/l.html">l</a></span>
+  <span class="signature">&#8594; _Logger</span>
+  
+
+</dt>
+<dd>
+  A global instance of the <code>_Logger</code> class.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+
+    <section class="summary offset-anchor" id="typedefs">
+      <h2>Typedefs</h2>
+      <dl>
+          
+  <dt id="ModelCtor" class="callable">
+    <span class="name"><a href="../floss/ModelCtor.html">ModelCtor</a></span>&lt;<wbr><span class="type-parameter">M</span>&gt;<span class="signature">
+      <span class="returntype parameter">= M Function<span class="signature">({<span class="parameter" id="param-inputEvents"><span>required</span> <span class="type-annotation"><a href="../floss/InputEventList-class.html">InputEventList</a></span> <span class="parameter-name">inputEvents</span>, </span><span class="parameter" id="param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span></span>})</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    A typedef representing a model constructor.
+    
+
+  </dd>
+
+      </dl>
+    </section>
+
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">floss</a></li>
+    <li class="self-crumb">floss.dart</li>
+</ol>
+
+    <h5><span class="package-name">floss</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="../floss">floss</a></li>
+</ol>
+
+  </div>
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <h5>floss library</h5>
+  </div><!--/sidebar-offcanvas-right-->
+</main>
+<footer>
+  <span class="no-break">
+    floss
+      0.2.0
+  </span>
+  
+</footer>
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+

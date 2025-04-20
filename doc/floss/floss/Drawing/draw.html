@@ -16,20 +16,16 @@
   <link rel="stylesheet" href="../../static-assets/github.css?v1">
   <link rel="stylesheet" href="../../static-assets/styles.css?v1">
   <link rel="icon" href="../../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">floss</a></li>
-    <li><a href="../../floss/floss-library.html">floss.dart</a></li>
+    <li><a href="../../floss">floss.dart</a></li>
     <li><a href="../../floss/Drawing-class.html">Drawing</a></li>
     <li class="self-crumb">draw method</li>
   </ol>
@@ -50,7 +46,6 @@
   </div>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -67,9 +62,8 @@
         <li>@<a href="https://api.flutter.dev/flutter/dart-core/override-constant.html">override</a></li>
     </ol>
   </div>
-
 <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../floss/PictureType-class.html">PictureType</a></span>&gt;</span></span>
-<span class="name ">draw</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="draw-param-canvas"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Canvas-class.html">Canvas</a></span> <span class="parameter-name">canvas</span>, </span></li>
+<span class="name ">draw</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="draw-param-canvas"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/painting/Canvas-class.html">Canvas</a></span> <span class="parameter-name">canvas</span>, </span></li>
 </ol>})
 
       <div class="features"><span class="feature">override</span></div>
@@ -90,9 +84,9 @@ Iterable&lt;PictureType&gt; draw({required ui.Canvas canvas}) {
     case Noop():
       return const [];
 
-    case Translate(:final _translation):
+    case Translate(:final _dx, :final _dy):
       canvas.save();
-      canvas.translate(_translation.x, _translation.y);
+      canvas.translate(_dx, _dy);
       final d = _draw(canvas: canvas).toList();
       canvas.restore();
       return d;
@@ -104,51 +98,45 @@ Iterable&lt;PictureType&gt; draw({required ui.Canvas canvas}) {
       canvas.restore();
       return d;
 
-    case Scale(:final _scale):
+    case Scale(:final _sx, :final _sy):
       canvas.save();
-      canvas.scale(_scale.x, _scale.y);
+      canvas.scale(_sx, _sy);
       final d = _draw(canvas: canvas).toList();
       canvas.restore();
       return d;
 
-    case Skew(:final _skew):
+    case Skew(:final _sx, :final _sy):
       canvas.save();
-      canvas.skew(_skew.x, _skew.y);
+      canvas.skew(_sx, _sy);
       final d = _draw(canvas: canvas).toList();
       canvas.restore();
       return d;
 
     case Transform(:final _matrix4):
       canvas.save();
-      canvas.transform(
-        td.Float64List.fromList(_matrix4.storage),
-      );
+      canvas.transform(_matrix4);
       final d = _draw(canvas: canvas).toList();
       canvas.restore();
       return d;
 
     case ClipPath(:final _path, :final _doAntiAlias):
       canvas.save();
-      final ps = _draw(canvas: canvas).toList();
       canvas.clipPath(_path, doAntiAlias: _doAntiAlias);
+      final ps = _draw(canvas: canvas).toList();
       canvas.restore();
       return ps;
 
     case ClipRect(:final _rect, :final _clipOp, :final _doAntiAlias):
       canvas.save();
+      canvas.clipRect(_rect, clipOp: _clipOp, doAntiAlias: _doAntiAlias);
       final ps = _draw(canvas: canvas).toList();
-      canvas.clipRect(
-        _rect.rect,
-        clipOp: _clipOp,
-        doAntiAlias: _doAntiAlias,
-      );
       canvas.restore();
       return ps;
 
     case ClipRRect(:final _rrect, :final _doAntiAlias):
       canvas.save();
+      canvas.clipRRect(_rrect, doAntiAlias: _doAntiAlias);
       final ps = _draw(canvas: canvas).toList();
-      canvas.clipRRect(_rrect.rrect, doAntiAlias: _doAntiAlias);
       canvas.restore();
       return ps;
 
@@ -157,7 +145,7 @@ Iterable&lt;PictureType&gt; draw({required ui.Canvas canvas}) {
       return _draw(canvas: canvas).toList();
 
     case SaveLayer(:final _bounds, :final _paint):
-      canvas.saveLayer(_bounds.rect, _paint.paint);
+      canvas.saveLayer(_bounds, _paint);
       return _draw(canvas: canvas).toList();
 
     case Restore():
@@ -172,11 +160,10 @@ Iterable&lt;PictureType&gt; draw({required ui.Canvas canvas}) {
       final ui.PictureRecorder recorder = ui.PictureRecorder();
       final canvas = ui.Canvas(
         recorder,
-        g.Rect.fromOffsetSize(g.Offset(0.0, 0.0), _size).rect,
+        ui.Rect.fromLTWH(0.0, 0.0, _size.width, _size.height),
       );
-      final painter = _Painter(
-        drawing: _BackgroundDrawing(canvasOps: _canvasOps),
-      )..paint(canvas, _size.size);
+      final painter = _Painter(drawing: _BackgroundDrawing(ops: ops))
+        ..paint(canvas, _size);
       return [
         ...painter.pictures,
         BackgroundPictureType(picture: recorder.endRecording()),
@@ -190,7 +177,6 @@ Iterable&lt;PictureType&gt; draw({required ui.Canvas canvas}) {
 
 
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -198,41 +184,31 @@ Iterable&lt;PictureType&gt; draw({required ui.Canvas canvas}) {
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">floss</a></li>
-    <li><a href="../../floss/floss-library.html">floss</a></li>
+    <li><a href="../../floss">floss</a></li>
     <li><a href="../../floss/Drawing-class.html">Drawing</a></li>
     <li class="self-crumb">draw method</li>
 </ol>
 
-
     <h5>Drawing class</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-->
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
 </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     floss
-      0.1.0
+      0.2.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../../static-assets/highlight.pack.js?v1"></script>
 <script src="../../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

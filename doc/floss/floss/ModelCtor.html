@@ -16,20 +16,16 @@
   <link rel="stylesheet" href="../static-assets/github.css?v1">
   <link rel="stylesheet" href="../static-assets/styles.css?v1">
   <link rel="icon" href="../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">floss</a></li>
-    <li><a href="../floss/floss-library.html">floss.dart</a></li>
+    <li><a href="../floss">floss.dart</a></li>
     <li class="self-crumb">ModelCtor&lt;<wbr><span class="type-parameter">M</span>&gt; typedef</li>
   </ol>
   <div class="self-name">ModelCtor</div>
@@ -49,7 +45,6 @@
   </div>
 </header>
 <main>
-
   <div
       id="dartdoc-main-content"
       class="main-content"
@@ -59,29 +54,29 @@
 <h1><span class="kind-typedef">ModelCtor&lt;<wbr><span class="type-parameter">M</span>&gt;</span> typedef 
  
 </h1></div>
-
     <section class="multi-line-signature">
         <span class="name ">ModelCtor</span>&lt;<wbr><span class="type-parameter">M</span>&gt; =
-     <span class="returntype">M Function<span class="signature">({<span class="parameter" id="param-size"><span>required</span> <span class="type-annotation"><a href="../floss/Size-class.html">Size</a></span> <span class="parameter-name">size</span></span>})</span></span>
+     <span class="returntype">M Function<span class="signature">({<span class="parameter" id="param-inputEvents"><span>required</span> <span class="type-annotation"><a href="../floss/InputEventList-class.html">InputEventList</a></span> <span class="parameter-name">inputEvents</span>, </span><span class="parameter" id="param-size"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span></span>})</span></span>
 
     </section>
 
     
 <section class="desc markdown">
   <p>A typedef representing a model constructor.</p>
-<p>It takes a required parameter <code>size</code> which is the initial size of the
-canvas.</p>
+<p>It takes a required parameter <code>size</code>  which is the
+initial size of the canvas and the <a href="../floss/InputEventList-class.html">ie.InputEventList</a> which contains any
+input event that occurred before the model was created. The constructor
+returns a parametrically polymorphic instance of the model <code>M</code>.</p>
 </section>
 
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">typedef ModelCtor&lt;M&gt; = M Function({required g.Size size});</code></pre>
+  <pre class="language-dart"><code class="language-dart">typedef ModelCtor&lt;M&gt; =
+    M Function({required ui.Size size, required ie.InputEventList inputEvents});</code></pre>
 </section>
 
-
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -89,40 +84,30 @@ canvas.</p>
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">floss</a></li>
-    <li><a href="../floss/floss-library.html">floss</a></li>
+    <li><a href="../floss">floss</a></li>
     <li class="self-crumb">ModelCtor&lt;<wbr><span class="type-parameter">M</span>&gt; typedef</li>
 </ol>
-
 
     <h5>floss library</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-left-->
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     floss
-      0.1.0
+      0.2.0
   </span>
-
   
 </footer>
-
 
 
 <script src="../static-assets/highlight.pack.js?v1"></script>
 <script src="../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 
